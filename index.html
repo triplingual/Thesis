@@ -62,15 +62,6 @@
 });
 	// ***************************
 
-
-	// ***************************
-	// LOAD FEATURES FROM GEOJSON
-	// ***************************
-	/*
-	var bergMentions = L.mapbox.featureLayer()
-		.loadURL('./data/berg-places.geojson');
-	*/
-
 	var map = L.map('map')
 	    .addLayer(mapboxSatellite)
 		.setView([14.544125, -14.722052], 7);
@@ -81,6 +72,10 @@
 	    "Landforms": mapboxSatellite
 	};
 	
+	// ***************************
+	// LOAD FEATURES FROM GEOJSON
+	// ***************************
+
 	var frenchStateSchools = L.mapbox.featureLayer()
 		.loadURL('./data/french-state.geojson');
 
@@ -89,6 +84,8 @@
 		.loadURL('./data/senegal-modern-admin-boundaries.geojson');
 
 	// Merged modern Senegal with modern The Gambia from  https://data.humdata.org/dataset/gambia-administrative-boundaries
+	// using info at http://www.gdal.org/drv_shapefile.html
+	// (but double boundaries on The Gambia!)
 	var modernSenegambiaBoundaries = L.mapbox.featureLayer()
 		.loadURL('./data/senegambia-modern-admin-boundaries.geojson');
 
