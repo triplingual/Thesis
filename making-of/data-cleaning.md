@@ -15,6 +15,8 @@ Since I am looking historically at the Senegambian area — grudgingly using the
 
 Info for using ogr2ogr (from GDAL) to [convert shapefiles to GeoJSON](http://vallandingham.me/shapefile_to_geojson.html)
 
+This [GIS StackExchange question about converting character encodings](https://gis.stackexchange.com/questions/15912/how-to-encode-shapefiles-from-latin1-to-utf-8) can be useful when going from a specific character set to another, including UTF-8. I had to do this with some Polish GIS files for the Mary Berg project, as they were in ISO 8859-2.
+
 ## Make GeoJSON more Readable
 
 Regexes to use in BBEdit for reducing line count of a geoJSON file that's gone through a [print improver](http://jsonprettyprint.com/) (sometimes called a pretty printer or JSON beautifier, which, ugh). My first file ballooned to 40K lines. "Easy to read" doesn't mean "easy to scroll".
