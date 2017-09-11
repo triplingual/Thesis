@@ -4,7 +4,7 @@ _Dear Reader: What I note here is what worked for me. I may have missed somethin
 
 ### Assumptions
 
-* You have GDAL installed ([Download from the project home](http://www.gdal.org/), but I don't have an installation tutorial handy)
+* You have GDAL installed. You may get something from looking at [my previous writeup from when I first used GDAL](https://github.com/triplingual/berg-diary/blob/master/README.md).
 * You are comfortable with running command-lines / shells (I recommend [Programming Historian](https://programminghistorian.org/lessons/intro-to-bash) [[Español](https://programminghistorian.org/es/lecciones/introduccion-a-bash)] for this and in general)
 
 ## Turn a Shapefile Into GeoJSON
