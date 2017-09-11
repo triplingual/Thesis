@@ -15,7 +15,7 @@ Since I am looking historically at the Senegambian area — grudgingly using the
 
 Info for using ogr2ogr (from GDAL) to [convert shapefiles to GeoJSON](http://vallandingham.me/shapefile_to_geojson.html)
 
-This [GIS StackExchange question about converting character encodings](https://gis.stackexchange.com/questions/15912/how-to-encode-shapefiles-from-latin1-to-utf-8) can be useful when going from a specific character set to another, including UTF-8. I had to do this with some Polish GIS files for the Mary Berg project, as they were in ISO 8859-2.
+This [GIS StackExchange question about converting character encodings](https://gis.stackexchange.com/questions/15912/how-to-encode-shapefiles-from-latin1-to-utf-8) can be useful when going from a specific character set to another, including UTF-8. I had to do this with some Polish GIS files for the Mary Berg project, as they were in ISO 8859-2. This time I didn't seem to have such difficulty with encodings, but I did get a warning during one merge process and ran it again setting `-lco ENCODING=UTF-8`
 
 ## Make GeoJSON more Readable
 
