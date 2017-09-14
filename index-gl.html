@@ -12,7 +12,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidHJpcGxpbmd1YWwiLCJhIjoiUFZTSEpYNCJ9.TjhlG-pO
 
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/triplingual/cj7gxh8w143r12rnzrux5qoc6',
+    style: 'mapbox://styles/mapbox/satellite-v9',
+//    style: 'mapbox://styles/triplingual/cj7gxh8w143r12rnzrux5qoc6',
     center: [-14.722052, 14.544125],
     zoom: 6
 });
@@ -21,7 +22,7 @@ map.addControl(new mapboxgl.NavigationControl());
 
 map.on('load', function(){
 // Historical map overlay
-/*
+
     map.addLayer({
         "id": "boilat",
         "source": {
@@ -33,7 +34,7 @@ map.on('load', function(){
         "maxzoom": 10,
         "source-layer": "boilat"
     });
-*/
+
 
 
 
