@@ -1,0 +1,106 @@
+<html>
+<head>
+	<title>Places of Education in Mid-C19 Senegambia</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+	<!-- Make sure you put this AFTER Leaflet's CSS -->
+	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+   crossorigin=""></script> 
+   
+   <script src="/js/leaflet.ajax.min.js"></script>  
+   
+</head>
+<body>
+	<div id="map" style="width:98%; height: 600px;float:left; min-width: 320px; margin: 1%;"></div>
+	<input id="slide" type="range" min="0" max="1" step="0.1" value="0.5" onchange="updateOpacity(this.value)">
+
+	<script>
+	var accessToken = 'pk.eyJ1IjoidHJpcGxpbmd1YWwiLCJhIjoiUFZTSEpYNCJ9.TjhlG-pOgpKcxXt8vL-IOg';
+	var mymap = L.map('map').setView([14.544125,-14.722052], 3);
+
+	/*
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' +  accessToken, {
+		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		maxZoom: 18,
+		id: 'mapbox.satellite',
+		accessToken: accessToken
+	}).addTo(mymap);
+
+	// More baselayer and upper layer previews at https://leaflet-extras.github.io/leaflet-providers/preview/
+	var Esri_WorldPhysical = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}', {
+		attribution: 'Tiles &copy; Esri &mdash; Source: US National Park Service',
+		maxZoom: 8
+	});
+	*/
+
+	var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+		attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+	});
+	Esri_WorldImagery.addTo(mymap);
+
+	var boilat = L.tileLayer('http://mapwarper.net/maps/tile/22884/{z}/{x}/{y}.png', 
+		{
+			attribution: "'Carte des peuples du Sénégal,' Bibliothèque nationale de France <a href='http://catalogue.bnf.fr/ark:/12148/cb44449466r' title='Bibliothèque nationale de France catalog entry for this map'>identifier ark:/12148/btv1b53136138p</a>",
+		minzoom: 6,
+		maxzoom: 12
+		});
+	boilat.addTo(mymap);
+
+/*
+	var kmms = L.tileLayer('http://mapwarper.net/maps/tile/23179/{z}/{x}/{y}.png', 
+		{
+			attribution: "'Kitāb al-masālik wa l-mamālik,' Bibliothèque nationale de France <a href='http://gallica.bnf.fr/ark:/12148/btv1b7200028f' title='Gallica at Bibliothèque nationale de France entry for this map'>identifier ark:/12148/btv1b7200028f</a>",
+		minzoom: 6,
+		maxzoom: 12
+		});
+	kmms.addTo(mymap);
+*/
+
+// imageBounds are in SW, NE order
+var imageUrl = '/images/istakhri.png',
+    imageBounds = [[-5.048874, -20.175048], [47.858145, 54.194210]],
+    imageOptions = {
+    	opacity: 0.4, 
+    	alt: "'Kitāb al-masālik wa l-mamālik,' Bibliothèque nationale de France", 
+    	attribution: "'Kitāb al-masālik wa l-mamālik,' Bibliothèque nationale de France <a href='http://gallica.bnf.fr/ark:/12148/btv1b7200028f' title='Gallica at Bibliothèque nationale de France entry for this map'>identifier ark:/12148/btv1b7200028f</a>"
+    };
+    
+
+/*
+// One way to do a simple popup
+*/
+var guinée = L.marker( [10.984035, -11.331137], {} );
+guinée.bindPopup("<img src='https://d1lfxha3ugu3d4.cloudfront.net/images/opencollection/objects/size2/22.239_SL1.jpg' width='250' /><p>Possibly Bullom. <a href='https://www.brooklynmuseum.org/opencollection/objects/12712'>Mancala Game Board, 19th century</a>. Wood, 8 1/4 x 23 1/4 x 5 1/8 in. (21 x 59.1 x 13 cm). Brooklyn Museum, Museum Expedition 1922, Robert B. Woodward Memorial Fund, 22.239. Creative Commons-BY (Photo: Brooklyn Museum, 22.239_SL1.jpg)</p>").openPopup();
+guinée.addTo(mymap);
+
+
+/* GeoJSON through AJAX */
+var geojsonLayer = new L.GeoJSON.AJAX("/data/senegambia-modern-gadm.geojson.json", {onEachFeature:popUp});
+
+
+/*
+// example of how a function might work
+	var popup = L.popup();
+
+	function onMapClick(e) {
+		popup
+			.setLatLng(e.latlng)
+			.setContent("You clicked the map at " + e.latlng.toString())
+			.openOn(mymap);
+	}
+
+	mymap.on('click', onMapClick);
+*/
+	/*
+	// start of making an opacity slider
+    function updateOpacity(value) {
+    	boilat.setOpacity(value);
+    }
+    */
+	</script>
+</body>
+</html>

@@ -23,6 +23,7 @@ map.addControl(new mapboxgl.NavigationControl());
 map.on('load', function(){
 // Historical map overlay
 
+/*
     map.addLayer({
         "id": "boilat",
         "source": {
@@ -35,18 +36,19 @@ map.on('load', function(){
         "source-layer": "boilat"
     });
 
+*/
 
 
 
 // https://stackoverflow.com/questions/45536403/mapbox-gl-js-and-geojson-as-an-external-file
 // https://mapzen.com/data/borders/
   // Working 9 September 2017
-  // Took reverse engineering a working example (https://www.mapbox.com/mapbox-gl-js/example/multiple-geometries/) and substituting things slowly to get this one working
+  // Took reverse engineering a working example (https://www.mapbox.com/mapbox-gl-js/example/multiple-geometries/) 
+  // and substituting things slowly to get this one working
 
-  // one layer per GeoJSON feature type, see http://stackoverflow.com/a/36927026
-  // layer must contain "source-layer" property: https://github.com/mapbox/mapbox-gl-js/issues/1734
+  // One layer per GeoJSON feature type, see http://stackoverflow.com/a/36927026
+  // Layer must contain "source-layer" property: https://github.com/mapbox/mapbox-gl-js/issues/1734
   
-/*
   map.addLayer({
     "id": "senegambia-boundaries",
     "type": "fill",
@@ -61,6 +63,66 @@ map.on('load', function(){
       "fill-outline-color": "#00ff00"
     }
   });
+// not so useful; doesn't show water boundaries
+/*
+  map.addLayer({
+    "id": "natural-earth-land",
+    "type": "line",
+    "source": {
+		type: "geojson",
+		data: "./data/ne_10m_admin_0_boundary_lines_land.geojson"
+    },
+    "filter": ["==", "$type", "LineString"],
+    "paint": {
+      "line-color": "#00ff00"
+    }
+  });
+*/
+  map.addLayer({
+    "id": "philippines",
+    "type": "line",
+    "source": {
+		type: "geojson",
+		data: "./data/philippines.geojson"
+    },
+    "filter": ["==", "$type", "Polygon"],
+    "paint": {
+      "line-color": "#ffffff"
+    }
+  });
+  
+  /*
+  Got from https://whosonfirst.mapzen.com/spelunker/id/85632203/
+  https://whosonfirst.mapzen.com/spelunker/ is very useful, but country-at-a-time might be a slog. More of one than deleting what I don't want from a world map?
+  */
+  map.addLayer({
+    "id": "indonesia",
+    "type": "line",
+    "source": {
+		type: "geojson",
+		data: "./data/indonesia.geojson"
+    },
+    "filter": ["==", "$type", "Polygon"],
+    "paint": {
+      "line-color": "#ffffff"
+    }
+  });
+/*
+// unuseful
+  map.addLayer({
+    "id": "natural-earth-maritime",
+    "type": "line",
+    "source": {
+		type: "geojson",
+		data: "./data/ne_10m_admin_0_boundary_lines_maritime_indicator.geojson"
+    },
+    "filter": ["==", "$type", "LineString"],
+    "paint": {
+      "line-color": "#00ffff"
+    }
+  });
+  */
+/*
   map.addLayer({
     "id": "historic",
     "type": "fill",
@@ -70,7 +132,6 @@ map.on('load', function(){
     },
     "source-layer": "historic"
 	});  
-  
 
 var simple = {
     "version": 8,
