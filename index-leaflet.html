@@ -37,11 +37,14 @@
 	});
 	*/
 
+// Baselayer
 	var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 		attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 	});
 	Esri_WorldImagery.addTo(mymap);
 
+
+// Georeferenced map as TileLayer
 	var boilat = L.tileLayer('http://mapwarper.net/maps/tile/22884/{z}/{x}/{y}.png', 
 		{
 			attribution: "'Carte des peuples du Sénégal,' Bibliothèque nationale de France <a href='http://catalogue.bnf.fr/ark:/12148/cb44449466r' title='Bibliothèque nationale de France catalog entry for this map'>identifier ark:/12148/btv1b53136138p</a>",
@@ -60,7 +63,8 @@
 	kmms.addTo(mymap);
 */
 
-// imageBounds are in SW, NE order
+// Non-georeferencable map image as ImageOverlay
+// NB: imageBounds are in SW, NE order
 var imageUrl = '/images/istakhri.png',
     imageBounds = [[-5.048874, -20.175048], [47.858145, 54.194210]],
     imageOptions = {
@@ -70,9 +74,7 @@ var imageUrl = '/images/istakhri.png',
     };
     
 
-/*
-// One way to do a simple popup
-*/
+/* One way to do a simple popup */
 var guinée = L.marker( [10.984035, -11.331137], {} );
 guinée.bindPopup("<img src='https://d1lfxha3ugu3d4.cloudfront.net/images/opencollection/objects/size2/22.239_SL1.jpg' width='250' /><p>Possibly Bullom. <a href='https://www.brooklynmuseum.org/opencollection/objects/12712'>Mancala Game Board, 19th century</a>. Wood, 8 1/4 x 23 1/4 x 5 1/8 in. (21 x 59.1 x 13 cm). Brooklyn Museum, Museum Expedition 1922, Robert B. Woodward Memorial Fund, 22.239. Creative Commons-BY (Photo: Brooklyn Museum, 22.239_SL1.jpg)</p>").openPopup();
 guinée.addTo(mymap);
