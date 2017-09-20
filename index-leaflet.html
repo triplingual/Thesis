@@ -80,9 +80,43 @@ guinée.bindPopup("<img src='https://d1lfxha3ugu3d4.cloudfront.net/images/openco
 guinée.addTo(mymap);
 
 
-/* GeoJSON through AJAX */
-var geojsonLayer = new L.GeoJSON.AJAX("/data/senegambia-modern-gadm.geojson.json", {onEachFeature:popUp});
+/* GeoJSON through AJAX for a ~pure Leaflet approach */
+/* https://gis.stackexchange.com/questions/68489/how-to-load-external-geojson-file-into-leaflet-map */
+var senegalGeojson		= new L.GeoJSON.AJAX("data/senegambia-modern-gadm.geojson");
+senegalGeojson.addTo(mymap);
 
+var philippinesGeojson	= new L.GeoJSON.AJAX("/data/philippines.geojson");
+philippinesGeojson.addTo(mymap);
+
+var javaGeojson	= new L.GeoJSON.AJAX("/data/java.geojson");
+javaGeojson.addTo(mymap);
+
+var melakaGeojson	= new L.GeoJSON.AJAX("/data/melaka.geojson");
+melakaGeojson.addTo(mymap);
+
+var borneoGeojson	= new L.GeoJSON.AJAX("/data/borneo.geojson");
+borneoGeojson.addTo(mymap);
+
+var maldivesGeojson	= new L.GeoJSON.AJAX("/data/maldives.geojson");
+maldivesGeojson.addTo(mymap);
+
+var srilankaGeojson	= new L.GeoJSON.AJAX("/data/sri-lanka.geojson");
+srilankaGeojson.addTo(mymap);
+
+var kalimantanTengahGeojson	= new L.GeoJSON.AJAX("/data/kalimantan-tengah-central.geojson");
+kalimantanTengahGeojson.addTo(mymap);
+
+var kalimantanBGeojson	= new L.GeoJSON.AJAX("/data/kalimantan-barat-west.geojson");
+kalimantanBGeojson.addTo(mymap);
+
+var kalimantanTimurGeojson	= new L.GeoJSON.AJAX("/data/kalimantan-timur-east.geojson");
+kalimantanTimurGeojson.addTo(mymap);
+
+var kalimantanSGeojson	= new L.GeoJSON.AJAX("/data/kalimantan-selatan-south.geojson");
+kalimantanSGeojson.addTo(mymap);
+
+var kalimantanUGeojson	= new L.GeoJSON.AJAX("/data/kalimantan-utara-north.geojson");
+kalimantanUGeojson.addTo(mymap);
 
 /*
 // example of how a function might work
