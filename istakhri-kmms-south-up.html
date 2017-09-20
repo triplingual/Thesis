@@ -1,0 +1,85 @@
+<html>
+<head>
+	<title>Places of Education in Mid-C19 Senegambia</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+	<!-- Make sure you put this AFTER Leaflet's CSS -->
+	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+		integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+   crossorigin=""></script> 
+   
+   <script src="/js/leaflet.ajax.min.js"></script>
+   
+   <style type="text/css">
+	   .leaflet-container {background-color: #444;}
+   </style>
+   
+</head>
+<body>
+	<div id="map" style="width:98%; height: 600px;float:left; min-width: 320px; margin: 1%;"></div>
+
+	<script>
+		var accessToken = 'pk.eyJ1IjoidHJpcGxpbmd1YWwiLCJhIjoiUFZTSEpYNCJ9.TjhlG-pOgpKcxXt8vL-IOg';
+		var mymap = L.map('map').setView([24.64702, 17.27051], 4);
+
+		// If we try to coerce a KMMS map into georectification
+		var kmms = L.tileLayer('http://mapwarper.net/maps/tile/23232/{z}/{x}/{y}.png', 
+			{
+				attribution: "'Kitāb al-masālik wa l-mamālik,' Bibliothèque nationale de France <a href='http://gallica.bnf.fr/ark:/12148/btv1b7200028f' title='Gallica at Bibliothèque nationale de France entry for this map'>identifier ark:/12148/btv1b7200028f</a>",
+			minzoom: 6,
+			maxzoom: 12
+			});
+//		kmms.addTo(mymap);
+
+		// Non-georeferencable map image as ImageOverlay
+		// NB: imageBounds are in SW, NE order
+		var imageUrl = '/images/istakhri.png',
+			imageBounds = [[-5.048874, -20.175048], [47.858145, 54.194210]],
+			imageOptions = {
+				opacity: 0.4, 
+				alt: "'Kitāb al-masālik wa l-mamālik,' Bibliothèque nationale de France", 
+				attribution: "'Kitāb al-masālik wa l-mamālik,' Bibliothèque nationale de France <a href='http://gallica.bnf.fr/ark:/12148/btv1b7200028f' title='Gallica at Bibliothèque nationale de France entry for this map'>identifier ark:/12148/btv1b7200028f</a>"
+			};
+		L.imageOverlay( imageUrl, imageBounds, imageOptions).addTo(mymap);
+		
+		// Markers, for explanatory positioning
+		var cyprus = L.marker( [12.83055, 21.79962] );
+		cyprus.bindPopup("Cyprus<br />Karen C. Pinto, Medieval Islamic Maps: An Exploration (Chicago: The University of Chicago Press, 2017).").openPopup();
+		cyprus.addTo(mymap);
+
+		var crete = L.marker( [13.18379, 24.93073] );
+		crete.bindPopup("Crete").openPopup();
+		crete.addTo(mymap);
+		
+		var sicily = L.marker( [13.92074, 28.33649] );
+		sicily.bindPopup("Sicily").openPopup();
+		sicily.addTo(mymap);
+		
+		var egypt = L.marker( [18.01008, 30.11353] );
+		egypt.bindPopup("Nile River, in Egypt").openPopup();
+		egypt.addTo(mymap);
+		
+		var senegal = L.marker( [25.76032, 36.0791] );
+		senegal.bindPopup("'Sudan' (Land of the Black)").openPopup();
+		senegal.addTo(mymap);
+		
+		// TODO: READ PINTO FOR MORE PLACES TO MARK
+		
+		// example of how a function might work
+		var popup = L.popup();
+
+		function onMapClick(e) {
+			popup
+				.setLatLng(e.latlng)
+				.setContent("You clicked the map at " + e.latlng.toString())
+				.openOn(mymap);
+		}
+
+		mymap.on('click', onMapClick);
+	</script>
+</body>
+</html>
