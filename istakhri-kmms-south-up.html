@@ -15,12 +15,41 @@
    <script src="/js/leaflet.ajax.min.js"></script>
    
    <style type="text/css">
-	   .leaflet-container {background-color: #444;}
+	   .leaflet-container {
+	       background-color: #E6D1B7;
+	   }
+	   #map {
+	       width: 900px;
+	       height: 700px;
+	       float: left;
+	       min-width: 320px;
+	       margin: 1%;
+	   }
+	   #commentary {
+	       width: 30%;
+	       min-width: 300px;
+	       max-width: 900px;
+	       float: left;
+	       clear: none;
+	       margin: 1%;
+	   }
    </style>
    
 </head>
 <body>
-	<div id="map" style="width:98%; height: 600px;float:left; min-width: 320px; margin: 1%;"></div>
+	<div id="map"></div>
+	<div id="commentary">
+		<h1 style="margin-top: 0;">Commentary</h1>
+		<p>
+		Spicy jalapeno bacon ipsum dolor amet chuck prosciutto tongue, boudin porchetta pig burgdoggen salami pastrami doner venison biltong. Salami pork loin flank, kielbasa ribeye short loin andouille frankfurter filet mignon chicken. Tongue tri-tip cupim, filet mignon pig kevin burgdoggen ball tip fatback. Tongue landjaeger shankle, corned beef shoulder boudin sirloin kielbasa pancetta pork loin swine tri-tip.
+		</p>
+		<p>
+		Pancetta salami leberkas, beef ribs swine andouille chuck meatloaf t-bone chicken ball tip jowl boudin landjaeger turducken. Meatloaf flank short loin beef ribs pork, turkey spare ribs filet mignon t-bone drumstick tongue. Chicken meatball pig short loin beef ribs leberkas. Prosciutto tongue pork shank sirloin turkey pork loin jerky picanha ground round. Chuck pastrami t-bone prosciutto shank landjaeger alcatra porchetta flank. Capicola tongue corned beef, drumstick shank salami sausage pork chop. Hamburger swine venison jowl, meatloaf pig frankfurter meatball rump pork alcatra capicola ground round.
+		</p>
+		<p>
+		Explainer image for the whole map at http://chicago.universitypressscholarship.com/doc/10.7208/chicago/9780226127019.001.0001/upso-9780226126968-graphic-033.jpg
+		</p>
+	</div>
 
 	<script>
 		var accessToken = 'pk.eyJ1IjoidHJpcGxpbmd1YWwiLCJhIjoiUFZTSEpYNCJ9.TjhlG-pOgpKcxXt8vL-IOg';
