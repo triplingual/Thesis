@@ -26,10 +26,12 @@
 		var accessToken = 'pk.eyJ1IjoidHJpcGxpbmd1YWwiLCJhIjoiUFZTSEpYNCJ9.TjhlG-pOgpKcxXt8vL-IOg';
 		var mymap = L.map('map').setView([24.64702, 17.27051], 4);
 
+		var kmmsAttribution	= "'Receuil' (containing 'Tarǧamat al-Masālik al-Mamālik', a Persian translation of al-Istakhrī's 'Kitāb al-Masālik w'al-Mamālik'), Bibliothèque nationale de France, <a href='http://gallica.bnf.fr/ark:/12148/btv1b7200028f/f8.image' title='Gallica at Bibliothèque nationale de France entry for this map'>identifier ark:/12148/btv1b7200028f</a>"
+
 		// If we try to coerce a KMMS map into georectification
 		var kmms = L.tileLayer('http://mapwarper.net/maps/tile/23232/{z}/{x}/{y}.png', 
 			{
-				attribution: "'Kitāb al-masālik wa l-mamālik,' Bibliothèque nationale de France <a href='http://gallica.bnf.fr/ark:/12148/btv1b7200028f' title='Gallica at Bibliothèque nationale de France entry for this map'>identifier ark:/12148/btv1b7200028f</a>",
+				attribution: kmmsAttribution,
 			minzoom: 6,
 			maxzoom: 12
 			});
@@ -42,7 +44,7 @@
 			imageOptions = {
 				opacity: 0.4, 
 				alt: "'Kitāb al-masālik wa l-mamālik,' Bibliothèque nationale de France", 
-				attribution: "'Kitāb al-masālik wa l-mamālik,' Bibliothèque nationale de France <a href='http://gallica.bnf.fr/ark:/12148/btv1b7200028f' title='Gallica at Bibliothèque nationale de France entry for this map'>identifier ark:/12148/btv1b7200028f</a>"
+				attribution: kmmsAttribution,
 			};
 		L.imageOverlay( imageUrl, imageBounds, imageOptions).addTo(mymap);
 		
