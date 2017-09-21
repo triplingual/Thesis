@@ -100,9 +100,9 @@
 		egypt.bindPopup("Nile River, Egyptian portion<br />Karen C. Pinto, <a href='http://dx.doi.org/10.7208/chicago/9780226127019.001.0001'>Medieval Islamic Maps: An Exploration</a> (Chicago: The University of Chicago Press, 2017), 72.").openPopup();
 		egypt.addTo(mymap);
 		
-		var senegal = L.marker( [25.76032, 36.0791] );
-		senegal.bindPopup("'Sudan' (Land of the Black)").openPopup();
+		var senegal = L.marker( [25.76032, 36.0791], {draggable: true} );
 		senegal.addTo(mymap);
+		senegal.bindPopup("'Bilad al-Sudan' (Land of the Black [People])<br />\nKaren C. Pinto, <a href='http://dx.doi.org/10.7208/chicago/9780226127019.001.0001'>Medieval Islamic Maps: An Exploration</a> (Chicago: The University of Chicago Press, 2017), 72.").openPopup();
 		
 		// TODO: READ PINTO FOR MORE PLACES TO MARK
 		
