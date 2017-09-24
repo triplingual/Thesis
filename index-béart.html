@@ -1,0 +1,141 @@
+<html>
+<head>
+	<title>Places of Education in Mid-C19 Senegambia</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+	<!-- Make sure you put this AFTER Leaflet's CSS -->
+	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+   crossorigin=""></script> 
+   
+   <script src="/js/leaflet.ajax.min.js"></script>  
+   
+</head>
+<body>
+	<div id="map" style="width:98%; height: 600px;float:left; min-width: 320px; margin: 1%;"></div>
+
+	<script>
+	var accessToken = 'pk.eyJ1IjoidHJpcGxpbmd1YWwiLCJhIjoiUFZTSEpYNCJ9.TjhlG-pOgpKcxXt8vL-IOg';
+	var mymap = L.map('map').setView([14.544125,-14.722052], 3);
+
+// Baselayer
+	var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+		attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+	});
+	Esri_WorldImagery.addTo(mymap);
+
+/* GeoJSON through AJAX for a ~pure Leaflet approach */
+/* https://gis.stackexchange.com/questions/68489/how-to-load-external-geojson-file-into-leaflet-map */
+// Philippines
+var philippinesGeojson	= new L.GeoJSON.AJAX("/data/philippines.geojson");
+philippinesGeojson.addTo(mymap);
+// Java
+var javaGeojson	= new L.GeoJSON.AJAX("/data/java.geojson");
+javaGeojson.addTo(mymap);
+// "Malacca"
+var melakaGeojson	= new L.GeoJSON.AJAX("/data/melaka.geojson");
+melakaGeojson.addTo(mymap);
+// "Bornéo"
+var borneoGeojson	= new L.GeoJSON.AJAX("/data/borneo.geojson");
+borneoGeojson.addTo(mymap);
+// "Ceylan"
+var srilankaGeojson	= new L.GeoJSON.AJAX("/data/sri-lanka.geojson");
+srilankaGeojson.addTo(mymap);
+// Maldives
+var maldivesGeojson	= new L.GeoJSON.AJAX("/data/maldives.geojson");
+maldivesGeojson.addTo(mymap);
+// Orient
+// 		TK; Béart drew this as the east coast of the Arabian peninsula, up to Syria/Lebanon
+// Syria
+var syriaGeojson	= new L.GeoJSON.AJAX("/data/syria.geojson");
+syriaGeojson.addTo(mymap);
+// "Abyssinie" (using modern Ethiopia)
+var ethiopiaGeojson	= new L.GeoJSON.AJAX("/data/ethiopia-abyssinia.geojson");
+ethiopiaGeojson.addTo(mymap);
+// Egypte
+var egyptGeojson	= new L.GeoJSON.AJAX("/data/egypt.geojson");
+egyptGeojson.addTo(mymap);
+// "Numidie" (used Pleiades for source, but this is unlikely to be the full extent of what Béart meant; also, Pleiades gives a box, not a land polygon)
+var numidiaGeojson	= new L.GeoJSON.AJAX("/data/numidia-pleiades.geojson");
+numidiaGeojson.addTo(mymap);
+// "Niam-niam"  (using CAR and South Sudan, DR Congo)
+var zande_1_Geojson	= new L.GeoJSON.AJAX("/data/d-r-congo.geojson");
+zande_1_Geojson.addTo(mymap);
+var zande_2_Geojson	= new L.GeoJSON.AJAX("/data/south-sudan.geojson");
+zande_2_Geojson.addTo(mymap);
+var zande_3_Geojson	= new L.GeoJSON.AJAX("/data/central-african-republic.geojson");
+zande_3_Geojson.addTo(mymap);
+// "Congo" (using Rep of Congo)
+var congoGeojson	= new L.GeoJSON.AJAX("/data/congo.geojson");
+congoGeojson.addTo(mymap);
+// "Haute-Guinée" (using modern Guinea)
+var guineaGeojson	= new L.GeoJSON.AJAX("/data/guinea.geojson");
+guineaGeojson.addTo(mymap);
+// "Ouganda"
+var ugandaGeojson	= new L.GeoJSON.AJAX("/data/uganda.geojson");
+ugandaGeojson.addTo(mymap);
+// Kenya
+var kenyaGeojson	= new L.GeoJSON.AJAX("/data/kenya.geojson");
+kenyaGeojson.addTo(mymap);
+// "Loango"
+var equatorialGuineaGeojson	= new L.GeoJSON.AJAX("/data/equatorial-guinea.geojson");
+equatorialGuineaGeojson.addTo(mymap);
+// "Rhodésie" (using Zambia)
+var zimbabweGeojson	= new L.GeoJSON.AJAX("/data/zimbabwe-rhodesia.geojson");
+zimbabweGeojson.addTo(mymap);
+// "Fang" (using Cameroon)
+var cameroonGeojson	= new L.GeoJSON.AJAX("/data/cameroon.geojson");
+cameroonGeojson.addTo(mymap);
+// Nigeria
+var nigeriaGeojson	= new L.GeoJSON.AJAX("/data/nigeria.geojson");
+nigeriaGeojson.addTo(mymap);
+// "Dahomey" (using Bénin)
+var beninGeojson	= new L.GeoJSON.AJAX("/data/benin-dahomey.geojson");
+beninGeojson.addTo(mymap);
+// "Baoulé" (using Côte d'Ivoire)
+var cotedivoireGeojson	= new L.GeoJSON.AJAX("/data/cote-divoire.geojson");
+cotedivoireGeojson.addTo(mymap);
+// "Trarza" (using Mauritania)
+var mauritaniaGeojson	= new L.GeoJSON.AJAX("/data/mauritania.geojson");
+mauritaniaGeojson.addTo(mymap);
+// "Tagant" 
+// Béart places his marker near both Sénégal and Mauritania, so we're already covered
+// Aïn Bou Arja (Maroc) (using Morocco)
+var moroccoGeojson	= new L.GeoJSON.AJAX("/data/morocco.geojson");
+moroccoGeojson.addTo(mymap);
+var westernSaharaGeojson	= new L.GeoJSON.AJAX("/data/western-sahara.geojson");
+westernSaharaGeojson.addTo(mymap);
+// In Salah (using Algeria)
+var algeriaGeojson	= new L.GeoJSON.AJAX("/data/algeria.geojson");
+algeriaGeojson.addTo(mymap);
+// Antilles (got a custom Mapzen Metro Extract of selected Antilles)
+var antilles_i_Geojson	= new L.GeoJSON.AJAX("/data/antilles_i.geojson");
+antilles_i_Geojson.addTo(mymap);
+var antilles_ii_Geojson	= new L.GeoJSON.AJAX("/data/antilles_ii.geojson");
+antilles_ii_Geojson.addTo(mymap);
+// Haiti
+var haitiGeojson	= new L.GeoJSON.AJAX("/data/haiti.geojson");
+haitiGeojson.addTo(mymap);
+// Louisiane et Floride (provisionally using Louisiana Purchase, but that's almost certainly overstating the case)
+var louisianeGeojson	= new L.GeoJSON.AJAX("/data/louisiana_purchase.geojson");
+louisianeGeojson.addTo(mymap);
+// Guyana
+var guyaneGeojson	= new L.GeoJSON.AJAX("/data/guyana.geojson");
+guyaneGeojson.addTo(mymap);
+// Brazil
+//		TK; Béart drew a little around Rio and São Paulo; not sure how to work this
+
+
+// "Savanes soudanes et sénégambiennes
+// Senegambia moderne
+var senegambiaGeojson = new L.GeoJSON.AJAX("data/senegambia-modern-gadm.geojson");
+senegambiaGeojson.addTo(mymap);
+// Mali moderne
+var maliGeojson	= new L.GeoJSON.AJAX("/data/mali.geojson");
+maliGeojson.addTo(mymap);
+
+	</script>
+</body>
+</html>
