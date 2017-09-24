@@ -70,6 +70,17 @@
 
 
 // Georeferenced map as TileLayer
+// 1803 Ottoman Turkish map
+	var africaTurkish = L.tileLayer('http://mapwarper.net/maps/tile/23278/{z}/{x}/{y}.png', 
+		{
+			attribution: "",
+	    	opacity: 0.5, 
+			minzoom: 6,
+			maxzoom: 12
+		});
+	africaTurkish.addTo(mymap);
+
+// Georeferenced map as TileLayer
 	var boilat = L.tileLayer('http://mapwarper.net/maps/tile/22884/{z}/{x}/{y}.png', 
 		{
 			attribution: "'Carte des peuples du Sénégal,' Bibliothèque nationale de France <a href='http://catalogue.bnf.fr/ark:/12148/cb44449466r' title='Bibliothèque nationale de France catalog entry for this map'>identifier ark:/12148/btv1b53136138p</a>",
