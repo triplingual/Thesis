@@ -1,0 +1,420 @@
+{
+    "features": [
+        {
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            5.0,
+                            35.0
+                        ],
+                        [
+                            5.0,
+                            40.0
+                        ],
+                        [
+                            10.0,
+                            40.0
+                        ],
+                        [
+                            10.0,
+                            35.0
+                        ],
+                        [
+                            5.0,
+                            35.0
+                        ]
+                    ]
+                ]
+            },
+            "type": "Feature",
+            "id": "batlas-location",
+            "properties": {
+                "snippet": "Unknown",
+                "link": "https://pleiades.stoa.org/places/991343/batlas-location",
+                "description": "",
+                "location_precision": "rough",
+                "title": "Barrington Atlas location"
+            }
+        }
+    ],
+    "contributors": [
+        {
+            "username": null,
+            "name": "Brian Z. Lund"
+        },
+        {
+            "username": null,
+            "name": "R. Talbert"
+        },
+        {
+            "username": "sgillies",
+            "homepage": null,
+            "name": "Sean Gillies",
+            "uri": "https://pleiades.stoa.org/author/sgillies"
+        },
+        {
+            "username": null,
+            "name": "M. Joann McDaniel"
+        },
+        {
+            "username": "jbecker",
+            "homepage": null,
+            "name": "Jeffrey Becker",
+            "uri": "https://pleiades.stoa.org/author/jbecker"
+        },
+        {
+            "username": null,
+            "name": "Mary E. Downs"
+        },
+        {
+            "username": "thomase",
+            "homepage": null,
+            "name": "Tom Elliott",
+            "uri": "https://pleiades.stoa.org/author/thomase"
+        }
+    ],
+    "locations": [
+        {
+            "contributors": [
+                {
+                    "username": null,
+                    "name": "R. Talbert"
+                },
+                {
+                    "username": null,
+                    "name": "Mary E. Downs"
+                },
+                {
+                    "username": null,
+                    "name": "M. Joann McDaniel"
+                },
+                {
+                    "username": null,
+                    "name": "Brian Z. Lund"
+                },
+                {
+                    "username": null,
+                    "name": "T. Elliott"
+                },
+                {
+                    "username": "sgillies",
+                    "homepage": null,
+                    "name": "Sean Gillies",
+                    "uri": "https://pleiades.stoa.org/author/sgillies"
+                }
+            ],
+            "associationCertainty": "certain",
+            "attestations": [],
+            "references": [],
+            "id": "batlas-location",
+            "end": null,
+            "title": "Barrington Atlas location",
+            "provenance": "Barrington Atlas: BAtlas 101 H4 Numidia Militiana",
+            "start": null,
+            "archaeologicalRemains": "unknown",
+            "details": "",
+            "review_state": "published",
+            "accuracy": null,
+            "featureType": [
+                "unknown"
+            ],
+            "description": "",
+            "created": "2010-07-05T12:57:38Z",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            5.0,
+                            35.0
+                        ],
+                        [
+                            5.0,
+                            40.0
+                        ],
+                        [
+                            10.0,
+                            40.0
+                        ],
+                        [
+                            10.0,
+                            35.0
+                        ],
+                        [
+                            5.0,
+                            35.0
+                        ]
+                    ]
+                ]
+            },
+            "locationType": [
+                "representative"
+            ],
+            "uri": "https://pleiades.stoa.org/places/991343/batlas-location",
+            "creators": [
+                {
+                    "username": null,
+                    "name": "R.S. Bagnall"
+                },
+                {
+                    "username": null,
+                    "name": "J.F. Drinkwater"
+                },
+                {
+                    "username": null,
+                    "name": "A.S. Esmonde-Cleary"
+                },
+                {
+                    "username": null,
+                    "name": "W.V. Harris"
+                },
+                {
+                    "username": null,
+                    "name": "R.C. Knapp"
+                },
+                {
+                    "username": null,
+                    "name": "S. Mitchell"
+                },
+                {
+                    "username": null,
+                    "name": "S.T. Parker"
+                },
+                {
+                    "username": null,
+                    "name": "C.M. Wells"
+                },
+                {
+                    "username": null,
+                    "name": "J.J. Wilkes"
+                }
+            ],
+            "@type": "Location",
+            "history": [
+                {
+                    "comment": "Global migration and reindexing of citations and provenance, February 2012",
+                    "modifiedBy": "admin",
+                    "modified": "2012-02-15T23:46:46Z"
+                }
+            ]
+        }
+    ],
+    "references": [
+        {
+            "otherIdentifier": " ",
+            "accessURI": "",
+            "citationDetail": "",
+            "shortTitle": "",
+            "bibliographicURI": "http://openlibrary.org/works/OL8327792W",
+            "formattedCitation": "BAtlas 101 H4 Numidia Militiana",
+            "alternateURI": "",
+            "type": "seeFurther"
+        },
+        {
+            "otherIdentifier": " ",
+            "accessURI": "https://en.wikipedia.org/wiki/Numidia",
+            "citationDetail": "",
+            "shortTitle": "",
+            "bibliographicURI": "",
+            "formattedCitation": "Wikipedia, Numidia",
+            "alternateURI": "",
+            "type": "seeAlso"
+        }
+    ],
+    "names": [
+        {
+            "nameType": "geographic",
+            "transcriptionAccuracy": "accurate",
+            "associationCertainty": "certain",
+            "romanized": "Numidia Militiana",
+            "attestations": [],
+            "references": [],
+            "id": "numidia-militiana",
+            "end": null,
+            "contributors": [
+                {
+                    "username": null,
+                    "name": "R. Talbert"
+                },
+                {
+                    "username": null,
+                    "name": "Mary E. Downs"
+                },
+                {
+                    "username": null,
+                    "name": "M. Joann McDaniel"
+                },
+                {
+                    "username": null,
+                    "name": "Brian Z. Lund"
+                },
+                {
+                    "username": null,
+                    "name": "T. Elliott"
+                },
+                {
+                    "username": "sgillies",
+                    "homepage": null,
+                    "name": "Sean Gillies",
+                    "uri": "https://pleiades.stoa.org/author/sgillies"
+                }
+            ],
+            "provenance": "Barrington Atlas: BAtlas 101 H4 Numidia Militiana",
+            "start": null,
+            "details": "",
+            "review_state": "published",
+            "description": "",
+            "transcriptionCompleteness": "complete",
+            "language": "",
+            "created": "2010-07-05T12:57:38Z",
+            "uri": "https://pleiades.stoa.org/places/991343/numidia-militiana",
+            "creators": [
+                {
+                    "username": null,
+                    "name": "R.S. Bagnall"
+                },
+                {
+                    "username": null,
+                    "name": "J.F. Drinkwater"
+                },
+                {
+                    "username": null,
+                    "name": "A.S. Esmonde-Cleary"
+                },
+                {
+                    "username": null,
+                    "name": "W.V. Harris"
+                },
+                {
+                    "username": null,
+                    "name": "R.C. Knapp"
+                },
+                {
+                    "username": null,
+                    "name": "S. Mitchell"
+                },
+                {
+                    "username": null,
+                    "name": "S.T. Parker"
+                },
+                {
+                    "username": null,
+                    "name": "C.M. Wells"
+                },
+                {
+                    "username": null,
+                    "name": "J.J. Wilkes"
+                }
+            ],
+            "attested": "",
+            "@type": "Name",
+            "history": [
+                {
+                    "comment": "Global migration and reindexing of citations and provenance, February 2012",
+                    "modifiedBy": "admin",
+                    "modified": "2012-02-15T23:46:46Z"
+                }
+            ]
+        }
+    ],
+    "id": "991343",
+    "subject": [],
+    "title": "Numidia Militiana",
+    "provenance": "Barrington Atlas: BAtlas 101 H4 Numidia Militiana",
+    "details": "<p>The Barrington Atlas Directory notes: Africa</p>",
+    "@context": {
+        "snippet": "dcterms:abstract",
+        "rights": "dcterms:rights",
+        "description": "dcterms:description",
+        "title": "dcterms:title",
+        "dcterms": "http://purl.org/dc/terms/",
+        "subject": "dcterms:subject",
+        "uri": "@id",
+        "created": "dcterms:created"
+    },
+    "review_state": "published",
+    "type": "FeatureCollection",
+    "description": "Late Roman province within the diocese of Africa.",
+    "reprPoint": [
+        7.5,
+        37.5
+    ],
+    "placeTypes": [
+        "province"
+    ],
+    "bbox": [
+        5.0,
+        35.0,
+        10.0,
+        40.0
+    ],
+    "connectsWith": [
+        "https://pleiades.stoa.org/places/154459219"
+    ],
+    "rights": "Copyright © The Contributors. Sharing and remixing permitted under terms of the Creative Commons Attribution 3.0 License (cc-by).",
+    "created": "2010-07-05T12:57:38Z",
+    "uri": "https://pleiades.stoa.org/places/991343",
+    "creators": [
+        {
+            "username": null,
+            "name": "J.J. Wilkes"
+        },
+        {
+            "username": null,
+            "name": "S.T. Parker"
+        },
+        {
+            "username": null,
+            "name": "R.S. Bagnall"
+        },
+        {
+            "username": null,
+            "name": "W.V. Harris"
+        },
+        {
+            "username": null,
+            "name": "A.S. Esmonde-Cleary"
+        },
+        {
+            "username": null,
+            "name": "C.M. Wells"
+        },
+        {
+            "username": null,
+            "name": "J.F. Drinkwater"
+        },
+        {
+            "username": null,
+            "name": "R.C. Knapp"
+        },
+        {
+            "username": null,
+            "name": "S. Mitchell"
+        }
+    ],
+    "@type": "Place",
+    "history": [
+        {
+            "comment": "description; reference type",
+            "modifiedBy": "thomase",
+            "modified": "2016-08-17T21:38:24Z"
+        },
+        {
+            "comment": "added reference",
+            "modifiedBy": "jbecker",
+            "modified": "2013-10-26T16:07:17Z"
+        },
+        {
+            "comment": "Global migration and reindexing of citations and provenance, February 2012",
+            "modifiedBy": "admin",
+            "modified": "2012-02-15T23:46:46Z"
+        },
+        {
+            "comment": "Detail text updated from former modernLocation. See http://atlantides.org/trac/pleiades/wiki/PlaceDetailsUpgrade",
+            "modifiedBy": "sgillies",
+            "modified": "2011-01-14T21:41:54Z"
+        }
+    ]
+}
