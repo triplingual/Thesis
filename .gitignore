@@ -2,7 +2,8 @@
 *.zip
 
 data/raw
-
 data/other-versions
+data/process-files
 
 *.gz
+
