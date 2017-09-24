@@ -79,6 +79,29 @@ guinée.bindPopup("<img src='https://d1lfxha3ugu3d4.cloudfront.net/images/openco
 guinée.addTo(mymap);
 
 
+
+/*
+*
+* Opacity Slider #1
+* TY https://stackoverflow.com/a/31256236 and more specifically https://jsfiddle.net/m13ojymf/2/
+* Buuuuut this is herky-jerky and I want it smoother
+* 
+function updateOpacity(value) {
+	boilat.setOpacity(value);
+} 
+*/
+
+
+/*
+*
+* Opacity Slider #2
+* Tried having 2, but they both controlled the same layer
+*
+*/
+var opacitySlider = new L.Control.opacitySlider();
+mymap.addControl(opacitySlider);
+opacitySlider.setOpacityLayer(africaTurkish);
+
 /* GeoJSON through AJAX for a ~pure Leaflet approach */
 /* https://gis.stackexchange.com/questions/68489/how-to-load-external-geojson-file-into-leaflet-map */
 var senegalGeojson		= new L.GeoJSON.AJAX("data/senegambia-modern-gadm.geojson");
@@ -130,12 +153,6 @@ kalimantanUGeojson.addTo(mymap);
 
 	mymap.on('click', onMapClick);
 */
-	/*
-	// start of making an opacity slider
-    function updateOpacity(value) {
-    	boilat.setOpacity(value);
-    }
-    */
 	</script>
 </body>
 </html>
