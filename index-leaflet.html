@@ -5,13 +5,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
-   crossorigin=""/>
+	crossorigin=""/>
 	<!-- Make sure you put this AFTER Leaflet's CSS -->
 	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
-   crossorigin=""></script> 
-   
-   <script src="/js/leaflet.ajax.min.js"></script>  
-   
+	crossorigin=""></script> 
+
+	<!--
+	*
+	* LEAFLET PLUGINS
+	*
+	-->
+	<!--
+	* Opacity Slider
+	-->
+	<link rel="stylesheet" href="js/opacity/Control.Opacity.css" />
+	<script src="js/opacity/Control.Opacity.js"></script>
+	<!--
+	* AJAX (for getting GeoJSON in)
+	-->
+	<script src="/js/leaflet.ajax.min.js"></script>  
+
+	<!--
+	*
+	* jQuery (for Opacity Slider)
+	*
+	-->
+<!--	<script src="lib/jquery/jquery-1.9.1.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!--	<script src="lib/jquery/jquery-ui-1.10.3.custom.min.js"></script> -->
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<!--	<link rel="stylesheet" href="lib/jquery/jquery-ui-1.10.3.custom.min.css" /> -->
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 </head>
 <body>
 	<div id="map" style="width:98%; height: 600px;float:left; min-width: 320px; margin: 1%;"></div>
