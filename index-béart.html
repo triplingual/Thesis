@@ -28,113 +28,212 @@
 
 /* GeoJSON through AJAX for a ~pure Leaflet approach */
 /* https://gis.stackexchange.com/questions/68489/how-to-load-external-geojson-file-into-leaflet-map */
-// Philippines
+// Philippines (cited in Béart map)
 var philippinesGeojson	= new L.GeoJSON.AJAX("/data/philippines.geojson");
 philippinesGeojson.addTo(mymap);
-// Java
+// Java (cited in Béart map)
 var javaGeojson	= new L.GeoJSON.AJAX("/data/java.geojson");
 javaGeojson.addTo(mymap);
-// "Malacca"
+// "Malacca" (cited in Béart map)
 var melakaGeojson	= new L.GeoJSON.AJAX("/data/melaka.geojson");
 melakaGeojson.addTo(mymap);
-// "Bornéo"
+// "Bornéo" (cited in Béart map)
 var borneoGeojson	= new L.GeoJSON.AJAX("/data/borneo.geojson");
 borneoGeojson.addTo(mymap);
-// "Ceylan"
+// "Ceylan" (cited in Béart map)
 var srilankaGeojson	= new L.GeoJSON.AJAX("/data/sri-lanka.geojson");
 srilankaGeojson.addTo(mymap);
-// Maldives
+// Maldives (cited in Béart map)
 var maldivesGeojson	= new L.GeoJSON.AJAX("/data/maldives.geojson");
 maldivesGeojson.addTo(mymap);
-// Orient
+// Orient (cited in Béart map)
 // 		TK; Béart drew this as the east coast of the Arabian peninsula, up to Syria/Lebanon
-// Syria
+// Syria (cited in Béart map)
 var syriaGeojson	= new L.GeoJSON.AJAX("/data/syria.geojson");
 syriaGeojson.addTo(mymap);
-// "Abyssinie" (using modern Ethiopia)
+// "Abyssinie"  (cited in Béart map; using modern Ethiopia)
 var ethiopiaGeojson	= new L.GeoJSON.AJAX("/data/ethiopia-abyssinia.geojson");
 ethiopiaGeojson.addTo(mymap);
-// Egypte
+// Egypte (Avelot 1908 p9; Béart map)
 var egyptGeojson	= new L.GeoJSON.AJAX("/data/egypt.geojson");
 egyptGeojson.addTo(mymap);
-// "Numidie" (used Pleiades for source, but this is unlikely to be the full extent of what Béart meant; also, Pleiades gives a box, not a land polygon)
+// "Numidie"  (cited in Béart map; used Pleiades for source, but this is unlikely to be the full extent of what Béart meant; also, Pleiades gives a box, not a land polygon)
 var numidiaGeojson	= new L.GeoJSON.AJAX("/data/numidia-pleiades.geojson");
 numidiaGeojson.addTo(mymap);
-// "Niam-niam"  (using CAR and South Sudan, DR Congo)
+// "Niam-niam"  (cited in Béart map; using CAR and South Sudan, DR Congo)
 var zande_1_Geojson	= new L.GeoJSON.AJAX("/data/d-r-congo.geojson");
 zande_1_Geojson.addTo(mymap);
 var zande_2_Geojson	= new L.GeoJSON.AJAX("/data/south-sudan.geojson");
 zande_2_Geojson.addTo(mymap);
 var zande_3_Geojson	= new L.GeoJSON.AJAX("/data/central-african-republic.geojson");
 zande_3_Geojson.addTo(mymap);
-// "Congo" (using Rep of Congo)
+// "Congo"  (cited in Béart map; using Rep of Congo; Avelot 1908 p21)
 var congoGeojson	= new L.GeoJSON.AJAX("/data/congo.geojson");
 congoGeojson.addTo(mymap);
-// "Haute-Guinée" (using modern Guinea)
+// "Haute-Guinée"  (cited in Béart map; using modern Guinea)
 var guineaGeojson	= new L.GeoJSON.AJAX("/data/guinea.geojson");
 guineaGeojson.addTo(mymap);
-// "Ouganda"
+// "Ouganda" (cited in Béart map)
 var ugandaGeojson	= new L.GeoJSON.AJAX("/data/uganda.geojson");
 ugandaGeojson.addTo(mymap);
-// Kenya
+// Kenya (cited in Béart map)
 var kenyaGeojson	= new L.GeoJSON.AJAX("/data/kenya.geojson");
 kenyaGeojson.addTo(mymap);
-// "Loango"
+// "Loango" (cited in Béart map)
 var equatorialGuineaGeojson	= new L.GeoJSON.AJAX("/data/equatorial-guinea.geojson");
 equatorialGuineaGeojson.addTo(mymap);
-// "Rhodésie" (using Zambia)
+// "Rhodésie"  (cited in Béart map; using Zambia)
 var zimbabweGeojson	= new L.GeoJSON.AJAX("/data/zimbabwe-rhodesia.geojson");
 zimbabweGeojson.addTo(mymap);
-// "Fang" (using Cameroon)
+// "Fang"  (cited in Béart map; using Cameroon & Gabon; https://en.wikipedia.org/wiki/Fang_people)
 var cameroonGeojson	= new L.GeoJSON.AJAX("/data/cameroon.geojson");
 cameroonGeojson.addTo(mymap);
-// Nigeria
+	// Also, Avelot 1908 p9
+var gabonGeojson	= new L.GeoJSON.AJAX("/data/gabon.geojson");
+gabonGeojson.addTo(mymap);
+// Nigeria (cited in Béart map)
 var nigeriaGeojson	= new L.GeoJSON.AJAX("/data/nigeria.geojson");
 nigeriaGeojson.addTo(mymap);
-// "Dahomey" (using Bénin)
+// "Dahomey"  (cited in Béart map; using Bénin)
+// Nago (Avelot 1908 p9)
 var beninGeojson	= new L.GeoJSON.AJAX("/data/benin-dahomey.geojson");
 beninGeojson.addTo(mymap);
-// "Baoulé" (using Côte d'Ivoire)
+// "Baoulé"  (cited in Béart map; using Côte d'Ivoire)
 var cotedivoireGeojson	= new L.GeoJSON.AJAX("/data/cote-divoire.geojson");
 cotedivoireGeojson.addTo(mymap);
-// "Trarza" (using Mauritania)
+// "Trarza"  (cited in Béart map; using Mauritania)
 var mauritaniaGeojson	= new L.GeoJSON.AJAX("/data/mauritania.geojson");
 mauritaniaGeojson.addTo(mymap);
-// "Tagant" 
+// "Tagant"  (cited in Béart map)
 // Béart places his marker near both Sénégal and Mauritania, so we're already covered
 // Aïn Bou Arja (Maroc) (using Morocco)
 var moroccoGeojson	= new L.GeoJSON.AJAX("/data/morocco.geojson");
 moroccoGeojson.addTo(mymap);
 var westernSaharaGeojson	= new L.GeoJSON.AJAX("/data/western-sahara.geojson");
 westernSaharaGeojson.addTo(mymap);
-// In Salah (using Algeria)
+// In Salah  (cited in Béart map; using Algeria)
 var algeriaGeojson	= new L.GeoJSON.AJAX("/data/algeria.geojson");
 algeriaGeojson.addTo(mymap);
-// Antilles (got a custom Mapzen Metro Extract of selected Antilles)
+// "Antilles"  (cited in Béart map; got a custom Mapzen Metro Extract of selected Antilles)
 var antilles_i_Geojson	= new L.GeoJSON.AJAX("/data/antilles_i.geojson");
 antilles_i_Geojson.addTo(mymap);
 var antilles_ii_Geojson	= new L.GeoJSON.AJAX("/data/antilles_ii.geojson");
 antilles_ii_Geojson.addTo(mymap);
-// Haiti
+// Haiti (cited in Béart map)
 var haitiGeojson	= new L.GeoJSON.AJAX("/data/haiti.geojson");
 haitiGeojson.addTo(mymap);
-// Louisiane et Floride (provisionally using Louisiana Purchase, but that's almost certainly overstating the case)
+// Louisiane et Floride  (cited in Béart map; provisionally using Louisiana Purchase, but that's almost certainly overstating the case)
 var louisianeGeojson	= new L.GeoJSON.AJAX("/data/louisiana_purchase.geojson");
 louisianeGeojson.addTo(mymap);
-// Guyana
+var floridaGeojson		= new L.GeoJSON.AJAX("data/florida.geojson");
+floridaGeojson.addTo(mymap);
+// Guyana (cited in Béart map)
 var guyaneGeojson	= new L.GeoJSON.AJAX("/data/guyana.geojson");
 guyaneGeojson.addTo(mymap);
-// Brazil
+// Brazil (cited in Béart map)
 //		TK; Béart drew a little around Rio and São Paulo; not sure how to work this
 
 
-// "Savanes soudanes et sénégambiennes
+// "Savanes soudanes et sénégambiennes" (Béart map)
+// Avelot 1908 p9
 // Senegambia moderne
 var senegambiaGeojson = new L.GeoJSON.AJAX("data/senegambia-modern-gadm.geojson");
 senegambiaGeojson.addTo(mymap);
 // Mali moderne
 var maliGeojson	= new L.GeoJSON.AJAX("/data/mali.geojson");
 maliGeojson.addTo(mymap);
+
+
+// already covered by Avelot or above
+// "Les Maures du Sénégal"
+// "Les Neyo du Sassandra (Côte d'Ivoire)"
+// "Les Ethiopiens et les Gallas" (latter seems to parse to Oromo of Ethiopia, Kenya, Somalia)
+// "Les Massaï" (p13, Kenya)
+// "Manica" (p13, 21; Rhodesia specified on p21)
+// "Rhodesia" (p16)
+// "Hottentotie" (p16)
+// "Ba-ganda" (p15; Uganda)
+// Sud-Ouest africain Allemand (Namibia; https://en.wikipedia.org/wiki/German_South_West_Africa)
+// "Bakouba" (p16; DR Congo)
+// Moyen-Niger (chart p21, seems like that's modern Mali)
+// Adamaona (chart p21; poss. Adamawa in Cameroon; http://www.sapere.it/enciclopedia/Banyo.html)
+// Chari (chart p21; can use CAR)
+// "État indépendant du Congo" (chart p21; DR Congo)
+// Benadir italien (chart p21; Somalia)
+
+// unclear how to proceed or needs further consideration
+// 
+// "Les Haoussa" (w/o further detail, p12)
+// "Palestine" (p12)
+// "Nubie" (p12)
+// "l'Ouganda, de l'Oussindya et de l'Oukéréwé" (Uganda, ??, ??; p13; last seems to have something to do with Lake Tanganyika, the middle with the Zambezi)
+// Oumtali (p13; either Mozambique or Zimbabwe, it seems; https://books.google.com/books?id=z5czAAAAYAAJ&pg=PA356&lpg=PA356&dq=%22oumtali%22&source=bl&ots=LoTBqO8dzN&sig=KzYkjTBzhaZGoz3wJJCCTyZhyf0&hl=en&sa=X&ved=0ahUKEwikmd_3t7_WAhVmlFQKHeiqBNoQ6AEIMzAD#v=onepage&q=%22oumtali%22&f=false)
+
+// Avelot 1908  p11
+// "les Berbères du Sud-tunisien" (Tunisia)
+var tunisiaGeojson	= new L.GeoJSON.AJAX("/data/tunisia.geojson");
+tunisiaGeojson.addTo(mymap);
+// "les Hottentots" (Khoikhoi; Nambibia, South Africa, Botswana)
+var namibiaGeojson	= new L.GeoJSON.AJAX("/data/namibia.geojson");
+namibiaGeojson.addTo(mymap);
+var southAfricaGeojson	= new L.GeoJSON.AJAX("/data/south-africa.geojson");
+southAfricaGeojson.addTo(mymap);
+var botswanaGeojson	= new L.GeoJSON.AJAX("/data/botswana.geojson");
+botswanaGeojson.addTo(mymap);
+// "Les Ewé du Togoland" (Togo)
+var togoGeojson	= new L.GeoJSON.AJAX("/data/togo.geojson");
+togoGeojson.addTo(mymap);
+// "Les Somalis" (Somalia, which relieves me from having to worry much about details about the Galla, above)
+var somaliaGeojson	= new L.GeoJSON.AJAX("/data/somalia.geojson");
+somaliaGeojson.addTo(mymap);
+// "Les Swaheli du Zanguebar" (p13; Zanzibar)
+// Got Zanzibar, need to piece it together
+
+// "Les Malgaches" (p14; Madagascar)
+var madagascarGeojson	= new L.GeoJSON.AJAX("/data/madagascar.geojson");
+madagascarGeojson.addTo(mymap);
+// "Territoire entre Tchad et Bénoué" (p14; Chad —but I'm not sure I could include the country of Chad on this mention— and northern Cameroon)
+// "Kimbounda" (people; p15; Angola [chart p21])
+var angolaGeojson	= new L.GeoJSON.AJAX("/data/angola.geojson");
+angolaGeojson.addTo(mymap);
+// "Comores" (p16; Comoros)
+var comorosGeojson	= new L.GeoJSON.AJAX("/data/comoros.geojson");
+comorosGeojson.addTo(mymap);
+//
+// Names/Places from chart from p21 otherwise unmentioned
+//
+// Liberia
+// Côte-d'Or (chart p21; Ghana; https://en.wikipedia.org/wiki/Gold_Coast_(British_colony) )
+// Soudan égyptien (chart p21; Sudan; https://en.wikipedia.org/wiki/History_of_Anglo-Egyptian_Sudan)
+var sudanGeojson	= new L.GeoJSON.AJAX("/data/sudan.geojson");
+sudanGeojson.addTo(mymap);
+// Victoria Nyanza (chart p21; Lake Victoria)
+// British East Africa (chart p21; Kenya)
+// German East Africa (chart p21; Burundi, Rwanda, Tanzania; https://en.wikipedia.org/wiki/German_East_Africa)
+var burundiGeojson	= new L.GeoJSON.AJAX("/data/burundi.geojson");
+burundiGeojson.addTo(mymap);
+var rwandaGeojson	= new L.GeoJSON.AJAX("/data/rwanda.geojson");
+rwandaGeojson.addTo(mymap);
+var tanzaniaGeojson	= new L.GeoJSON.AJAX("/data/tanzania.geojson");
+tanzaniaGeojson.addTo(mymap);
+
+// Zanguebar (chart p21; Zanzibar island)
+// Angola (chart p21; but does he mean the same thing as modern Angola?)
+
+// NB: Map on p19, but I think it reflects as much the partial knowledge of Euros as the actual distro of the game. Or at least I don't think it can be taken as the last word on the distro of the game.
+
+//
+// AVELOT 1906
+//
+// (Only noting the ones not in Aveloot 1908)
+//
+// "les Kadche d'entre Tchad et Bénoué" (but there's a note: "D'après l'autorité de Schweinfurth, _Au cœur de l'Afrique_. Paris, 1875, t. II, p. 28, mais je n'ai trouvé nulle part ailleurs de mention de cette tribu des Kadches.'" I will take this as meaning there is no such people.)
+// Bongo (Gabon; https://en.wikipedia.org/wiki/Bongo_people_(Gabon) )
+// Diour (??)
+// Shillouk (South Sudan; https://en.wikipedia.org/wiki/Shilluk_people)
+// Ouroua (?; Lulua? probably DR Congo, as that's where _kisolo_ is played; https://en.wikipedia.org/wiki/Kisolo)
+
+
 
 	</script>
 </body>
