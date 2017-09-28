@@ -122,9 +122,11 @@ antilles_ii_Geojson.addTo(mymap);
 // Haiti (cited in Béart map)
 var haitiGeojson	= new L.GeoJSON.AJAX("/data/haiti.geojson");
 haitiGeojson.addTo(mymap);
-// Louisiane et Floride  (cited in Béart map; provisionally using Louisiana Purchase, but that's almost certainly overstating the case)
-var louisianeGeojson	= new L.GeoJSON.AJAX("/data/louisiana_purchase.geojson");
+// Louisiane et Floride  (cited in Béart map)
+//	Louisiana became a state in 1812, early enough for my purposes)
+var louisianeGeojson	= new L.GeoJSON.AJAX("/data/louisiana.geojson");
 louisianeGeojson.addTo(mymap);
+//	Florida didn't become a state until 1845, but Georgia was 1788 and Alabama was 1819, so Florida's borders should have been essentially these throughout my time period
 var floridaGeojson		= new L.GeoJSON.AJAX("data/florida.geojson");
 floridaGeojson.addTo(mymap);
 // Guyana (cited in Béart map)
@@ -160,6 +162,8 @@ maliGeojson.addTo(mymap);
 // Chari (chart p21; can use CAR)
 // "État indépendant du Congo" (chart p21; DR Congo)
 // Benadir italien (chart p21; Somalia)
+// Zanguebar (chart p21; Zanzibar island)
+// British East Africa (chart p21; Kenya)
 
 // unclear how to proceed or needs further consideration
 // 
@@ -178,6 +182,8 @@ var namibiaGeojson	= new L.GeoJSON.AJAX("/data/namibia.geojson");
 namibiaGeojson.addTo(mymap);
 var southAfricaGeojson	= new L.GeoJSON.AJAX("/data/south-africa.geojson");
 southAfricaGeojson.addTo(mymap);
+var lesothoGeojson	= new L.GeoJSON.AJAX("/data/lesotho	.geojson");
+lesothoGeojson.addTo(mymap);
 var botswanaGeojson	= new L.GeoJSON.AJAX("/data/botswana.geojson");
 botswanaGeojson.addTo(mymap);
 // "Les Ewé du Togoland" (Togo)
@@ -186,6 +192,8 @@ togoGeojson.addTo(mymap);
 // "Les Somalis" (Somalia, which relieves me from having to worry much about details about the Galla, above)
 var somaliaGeojson	= new L.GeoJSON.AJAX("/data/somalia.geojson");
 somaliaGeojson.addTo(mymap);
+var somalilandGeojson	= new L.GeoJSON.AJAX("/data/somaliland.geojson");
+somalilandGeojson.addTo(mymap);
 // "Les Swaheli du Zanguebar" (p13; Zanzibar)
 // Got Zanzibar, need to piece it together
 
@@ -203,12 +211,15 @@ comorosGeojson.addTo(mymap);
 // Names/Places from chart from p21 otherwise unmentioned
 //
 // Liberia
+var liberiaGeojson	= new L.GeoJSON.AJAX("/data/liberia.geojson");
+liberiaGeojson.addTo(mymap);
 // Côte-d'Or (chart p21; Ghana; https://en.wikipedia.org/wiki/Gold_Coast_(British_colony) )
+var ghanaGeojson	= new L.GeoJSON.AJAX("/data/ghana.geojson");
+ghanaGeojson.addTo(mymap);
 // Soudan égyptien (chart p21; Sudan; https://en.wikipedia.org/wiki/History_of_Anglo-Egyptian_Sudan)
 var sudanGeojson	= new L.GeoJSON.AJAX("/data/sudan.geojson");
 sudanGeojson.addTo(mymap);
 // Victoria Nyanza (chart p21; Lake Victoria)
-// British East Africa (chart p21; Kenya)
 // German East Africa (chart p21; Burundi, Rwanda, Tanzania; https://en.wikipedia.org/wiki/German_East_Africa)
 var burundiGeojson	= new L.GeoJSON.AJAX("/data/burundi.geojson");
 burundiGeojson.addTo(mymap);
@@ -217,7 +228,6 @@ rwandaGeojson.addTo(mymap);
 var tanzaniaGeojson	= new L.GeoJSON.AJAX("/data/tanzania.geojson");
 tanzaniaGeojson.addTo(mymap);
 
-// Zanguebar (chart p21; Zanzibar island)
 // Angola (chart p21; but does he mean the same thing as modern Angola?)
 
 // NB: Map on p19, but I think it reflects as much the partial knowledge of Euros as the actual distro of the game. Or at least I don't think it can be taken as the last word on the distro of the game.
@@ -225,7 +235,7 @@ tanzaniaGeojson.addTo(mymap);
 //
 // AVELOT 1906
 //
-// (Only noting the ones not in Aveloot 1908)
+// (Only noting the ones not in Avelot 1908)
 //
 // "les Kadche d'entre Tchad et Bénoué" (but there's a note: "D'après l'autorité de Schweinfurth, _Au cœur de l'Afrique_. Paris, 1875, t. II, p. 28, mais je n'ai trouvé nulle part ailleurs de mention de cette tribu des Kadches.'" I will take this as meaning there is no such people.)
 // Bongo (Gabon; https://en.wikipedia.org/wiki/Bongo_people_(Gabon) )
@@ -233,6 +243,55 @@ tanzaniaGeojson.addTo(mymap);
 // Shillouk (South Sudan; https://en.wikipedia.org/wiki/Shilluk_people)
 // Ouroua (?; Lulua? probably DR Congo, as that's where _kisolo_ is played; https://en.wikipedia.org/wiki/Kisolo)
 
+
+// DE VOOGT 1997 (only the new ones)
+//
+// Cape Verde (p14)
+var capeVerdeGeojson	= new L.GeoJSON.AJAX("/data/cape-verde.geojson");
+capeVerdeGeojson.addTo(mymap);
+// Sierra Leone (p14)
+var sierraLeoneGeojson	= new L.GeoJSON.AJAX("/data/sierra-leone.geojson");
+sierraLeoneGeojson.addTo(mymap);
+// Barbados (p14; covered with Antilles)
+// Suriname (p14)
+var surinameGeojson	= new L.GeoJSON.AJAX("/data/suriname.geojson");
+surinameGeojson.addTo(mymap);
+// Chad (p52)
+var chadGeojson	= new L.GeoJSON.AJAX("/data/chad.geojson");
+chadGeojson.addTo(mymap);
+// Guinea Bissau (p54)
+var guineaBissauGeojson	= new L.GeoJSON.AJAX("/data/guinea-bissau.geojson");
+guineaBissauGeojson.addTo(mymap);
+// Malawi (p56)
+var malawiGeojson	= new L.GeoJSON.AJAX("/data/malawi.geojson");
+malawiGeojson.addTo(mymap);
+
+
+// China (p71; but probably should get doco on when game arrived in East and Southeast Asia before making strong claims including them; Africa is enough, for sure, so no reason to overreach)
+// India (p71; same note as China)
+
+// Cyprus (p18)
+var cyprusGeojson	= new L.GeoJSON.AJAX("/data/cyprus.geojson");
+cyprusGeojson.addTo(mymap);
+// Bahamas (p18)
+var bahamasGeojson	= new L.GeoJSON.AJAX("/data/bahamas.geojson");
+bahamasGeojson.addTo(mymap);
+// Guam (p18)
+var guamGeojson	= new L.GeoJSON.AJAX("/data/guam.geojson");
+guamGeojson.addTo(mymap);
+// Spain (p18; intriguing! since mancala is old and since it may have been spread [excepting many parts of Africa] by Muslim commerce, no reason the residents of Al Andalus wouldn't have played it; but like China+India, need grounding in research)
+// Burkina Faso (p32; cites Walker 1990 on this; need to follow the cite)
+var burkinaFasoGeojson	= new L.GeoJSON.AJAX("/data/burkina-faso.geojson");
+burkinaFasoGeojson.addTo(mymap);
+
+// TOWNSHEND 1979
+//
+// Iraq (p3)
+var iraqGeojson	= new L.GeoJSON.AJAX("/data/iraq.geojson");
+iraqGeojson.addTo(mymap);
+// Mongolia (p3)
+var mongoliaGeojson	= new L.GeoJSON.AJAX("/data/mongolia.geojson");
+mongoliaGeojson.addTo(mymap);
 
 
 	</script>
