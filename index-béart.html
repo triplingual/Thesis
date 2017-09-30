@@ -130,7 +130,8 @@ louisianeGeojson.addTo(mymap);
 var floridaGeojson		= new L.GeoJSON.AJAX("data/florida.geojson");
 floridaGeojson.addTo(mymap);
 // Guyana (cited in Béart map)
-var guyaneGeojson	= new L.GeoJSON.AJAX("/data/guyana.geojson");
+// NEED TO CLARIFY: GUYANA OR FRENCH GUYANA
+var guyaneGeojson	= new L.GeoJSON.AJAX("/data/guyane.geojson");
 guyaneGeojson.addTo(mymap);
 // Brazil (cited in Béart map)
 //		TK; Béart drew a little around Rio and São Paulo; not sure how to work this
@@ -164,6 +165,8 @@ maliGeojson.addTo(mymap);
 // Benadir italien (chart p21; Somalia)
 // Zanguebar (chart p21; Zanzibar island)
 // British East Africa (chart p21; Kenya)
+// Angola (Avelot, 1908, chart p21; but does he mean the same thing as modern Angola?)
+// Barbados (De Voogt, 1997; p14; covered with Antilles)
 
 // unclear how to proceed or needs further consideration
 // 
@@ -172,6 +175,11 @@ maliGeojson.addTo(mymap);
 // "Nubie" (p12)
 // "l'Ouganda, de l'Oussindya et de l'Oukéréwé" (Uganda, ??, ??; p13; last seems to have something to do with Lake Tanganyika, the middle with the Zambezi)
 // Oumtali (p13; either Mozambique or Zimbabwe, it seems; https://books.google.com/books?id=z5czAAAAYAAJ&pg=PA356&lpg=PA356&dq=%22oumtali%22&source=bl&ots=LoTBqO8dzN&sig=KzYkjTBzhaZGoz3wJJCCTyZhyf0&hl=en&sa=X&ved=0ahUKEwikmd_3t7_WAhVmlFQKHeiqBNoQ6AEIMzAD#v=onepage&q=%22oumtali%22&f=false)
+// China (De Voogt 1997, p71; but probably should get doco on when game arrived in East and Southeast Asia before making strong claims including them; Africa is enough, for sure, so no reason to overreach)
+// India (De Voogt 1997, p71; same note as China)
+// Spain (De Voogt 1997, p18; intriguing! since mancala is old and since it may have been spread [excepting many parts of Africa] by Muslim commerce, no reason the residents of Al Andalus wouldn't have played it; but like China+India, need grounding in research)
+// "les Kadche d'entre Tchad et Bénoué" (Avelot 1906; but there's a note: "D'après l'autorité de Schweinfurth, _Au cœur de l'Afrique_. Paris, 1875, t. II, p. 28, mais je n'ai trouvé nulle part ailleurs de mention de cette tribu des Kadches.'" I will take this as meaning there is no such people.)
+
 
 // Avelot 1908  p11
 // "les Berbères du Sud-tunisien" (Tunisia)
@@ -228,8 +236,6 @@ rwandaGeojson.addTo(mymap);
 var tanzaniaGeojson	= new L.GeoJSON.AJAX("/data/tanzania.geojson");
 tanzaniaGeojson.addTo(mymap);
 
-// Angola (chart p21; but does he mean the same thing as modern Angola?)
-
 // NB: Map on p19, but I think it reflects as much the partial knowledge of Euros as the actual distro of the game. Or at least I don't think it can be taken as the last word on the distro of the game.
 
 //
@@ -237,11 +243,10 @@ tanzaniaGeojson.addTo(mymap);
 //
 // (Only noting the ones not in Avelot 1908)
 //
-// "les Kadche d'entre Tchad et Bénoué" (but there's a note: "D'après l'autorité de Schweinfurth, _Au cœur de l'Afrique_. Paris, 1875, t. II, p. 28, mais je n'ai trouvé nulle part ailleurs de mention de cette tribu des Kadches.'" I will take this as meaning there is no such people.)
-// Bongo (Gabon; https://en.wikipedia.org/wiki/Bongo_people_(Gabon) )
-// Diour (??)
-// Shillouk (South Sudan; https://en.wikipedia.org/wiki/Shilluk_people)
-// Ouroua (?; Lulua? probably DR Congo, as that's where _kisolo_ is played; https://en.wikipedia.org/wiki/Kisolo)
+// Bongo (Avelot 1906; Gabon; https://en.wikipedia.org/wiki/Bongo_people_(Gabon) )
+// Diour (Avelot 1906; ??)
+// Shillouk (Avelot 1906; South Sudan; https://en.wikipedia.org/wiki/Shilluk_people)
+// Ouroua (Avelot 1906; Lulua? probably DR Congo, as that's where _kisolo_ is played; https://en.wikipedia.org/wiki/Kisolo)
 
 
 // DE VOOGT 1997 (only the new ones)
@@ -252,7 +257,6 @@ capeVerdeGeojson.addTo(mymap);
 // Sierra Leone (p14)
 var sierraLeoneGeojson	= new L.GeoJSON.AJAX("/data/sierra-leone.geojson");
 sierraLeoneGeojson.addTo(mymap);
-// Barbados (p14; covered with Antilles)
 // Suriname (p14)
 var surinameGeojson	= new L.GeoJSON.AJAX("/data/suriname.geojson");
 surinameGeojson.addTo(mymap);
@@ -265,11 +269,6 @@ guineaBissauGeojson.addTo(mymap);
 // Malawi (p56)
 var malawiGeojson	= new L.GeoJSON.AJAX("/data/malawi.geojson");
 malawiGeojson.addTo(mymap);
-
-
-// China (p71; but probably should get doco on when game arrived in East and Southeast Asia before making strong claims including them; Africa is enough, for sure, so no reason to overreach)
-// India (p71; same note as China)
-
 // Cyprus (p18)
 var cyprusGeojson	= new L.GeoJSON.AJAX("/data/cyprus.geojson");
 cyprusGeojson.addTo(mymap);
@@ -279,7 +278,6 @@ bahamasGeojson.addTo(mymap);
 // Guam (p18)
 var guamGeojson	= new L.GeoJSON.AJAX("/data/guam.geojson");
 guamGeojson.addTo(mymap);
-// Spain (p18; intriguing! since mancala is old and since it may have been spread [excepting many parts of Africa] by Muslim commerce, no reason the residents of Al Andalus wouldn't have played it; but like China+India, need grounding in research)
 // Burkina Faso (p32; cites Walker 1990 on this; need to follow the cite)
 var burkinaFasoGeojson	= new L.GeoJSON.AJAX("/data/burkina-faso.geojson");
 burkinaFasoGeojson.addTo(mymap);
