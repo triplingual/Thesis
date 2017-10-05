@@ -34,6 +34,8 @@
 <body>
 	<div id="map" style="width:98%; height: 600px;float:left; min-width: 320px; margin: 1%;"></div>
 	<script>
+	// Transforming this page into a landing page, but keeping some snippets
+
 	// Not debugging out
 	var DEBUGGING = 0;
 	// Debugging out
@@ -47,14 +49,7 @@
 	// MAPBOX BASELAYERS	
 	// ***************************
 	L.mapbox.accessToken = 'pk.eyJ1IjoidHJpcGxpbmd1YWwiLCJhIjoiUFZTSEpYNCJ9.TjhlG-pOgpKcxXt8vL-IOg';
-// Mapbox light is nice and gray, appropriately muted perhaps
-	var mapboxLight = L.tileLayer('https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
-	    attribution: '© <a href="https://www.mapbox.com/map-feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-});
-// Mapbox streets has the value of having country names in the/a national language
-	var mapboxStreets = L.tileLayer('https://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
-            attribution: '© <a href="https://www.mapbox.com/map-feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-});
+
 // Mapbox satellite has the virtue of not having distracting 21st century nation-state borders
 	var mapboxSatellite = L.tileLayer('https://api.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
             attribution: '© <a href="https://www.mapbox.com/map-feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -65,41 +60,17 @@
 	    .addLayer(mapboxSatellite)
 		.setView([14.544125, -14.722052], 7);
 
-	var baseLayers = {
-	    "Grayscale": mapboxLight,
-	    "Streets": mapboxStreets,
-	    "Landforms": mapboxSatellite
-	};
-	
 	// ***************************
 	// LOAD FEATURES FROM GEOJSON
 	// ***************************
 
-	var frenchStateSchools = L.mapbox.featureLayer()
-		.loadURL('./data/french-state.geojson');
-
 	// From https://data.humdata.org/dataset/senegal-administrative-boundaries
-	var modernSenegalBoundaries = L.mapbox.featureLayer()
-		.loadURL('./data/senegal-modern-admin-boundaries.geojson');
-
-	// Merged modern Senegal with modern The Gambia from  https://data.humdata.org/dataset/gambia-administrative-boundaries
-	// using info at http://www.gdal.org/drv_shapefile.html
-	// (but double boundaries on The Gambia!)
 	var modernSenegambiaBoundaries = L.mapbox.featureLayer()
-		.loadURL('./data/senegambia-modern-admin-boundaries.geojson');
+		.loadURL('./data/senegambia-modern-gadm.geojson');
+	modernSenegambiaBoundaries.addTo(map);
 
 	var boilat1853 = L.tileLayer('http://mapwarper.net/maps/tile/22884/{z}/{x}/{y}.png', {attribution: "Carte des peuples du Sénégal: Bibliothèque nationale de France <a href='http://catalogue.bnf.fr/ark:/12148/cb44449466r' title='Bibliothèque nationale de France catalog entry for this map'>identifier ark:/12148/btv1b53136138p</a>"});
-
-	var overlays = {
-	    "Boilat 1853": boilat1853,
-	    "Modern Sénégal": modernSenegalBoundaries,
-	    "Modern Sénégambie": modernSenegambiaBoundaries,
-	    "French State Schools": frenchStateSchools
-	};
-
-	L.control.layers(baseLayers, overlays).addTo(map);
-
-
+	boilat1853.addTo(map);
 
 	if ( DEBUGGING ) { window.alert("zoom = " + map.getZoom()); }
 </script>
