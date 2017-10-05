@@ -70,8 +70,9 @@
 
 
 // Georeferenced map as TileLayer
-// 1803 Ottoman Turkish map
-	var africaTurkish = L.tileLayer('http://mapwarper.net/maps/tile/23278/{z}/{x}/{y}.png', 
+// 1803 Ottoman Turkish atlas maps
+	var africaTurkish = L.tileLayer('http://mapwarper.net/maps/tile/23278/{z}/{x}/{y}.png', // BNF version
+//L.tileLayer('http://mapwarper.net/maps/tile/23527/{z}/{x}/{y}.png',   // LoC version
 		{
 			attribution: "",
 	    	opacity: 0.5, 
@@ -79,6 +80,15 @@
 			maxzoom: 12
 		});
 	africaTurkish.addTo(mymap);
+	var midEastTurkish = L.tileLayer('http://mapwarper.net/maps/tile/23528/{z}/{x}/{y}.png', 
+		{
+			attribution: "",
+			minzoom: 6,
+			maxzoom: 12
+		});
+	midEastTurkish.addTo(mymap);
+
+
 
 // Georeferenced map as TileLayer
 	var boilat = L.tileLayer('http://mapwarper.net/maps/tile/22884/{z}/{x}/{y}.png', 
