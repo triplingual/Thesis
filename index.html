@@ -76,9 +76,9 @@
 		.loadURL('./data/senegambia-modern-gadm.geojson');
 	modernSenegambiaBoundaries.addTo(map);
 
-	var boilat1853 = L.tileLayer('http://mapwarper.net/maps/tile/22884/{z}/{x}/{y}.png', {attribution: "Carte des peuples du Sénégal: Bibliothèque nationale de France <a href='http://catalogue.bnf.fr/ark:/12148/cb44449466r' title='Bibliothèque nationale de France catalog entry for this map'>identifier ark:/12148/btv1b53136138p</a>"});
+	var boilat1853 = L.tileLayer('http://mapwarper.net/maps/tile/22884/{z}/{x}/{y}.png', {attribution: "Carte des peuples du Sénégal: Bibliothèque nationale de France, <a href='http://catalogue.bnf.fr/ark:/12148/cb44449466r' title='Bibliothèque nationale de France catalog entry for this map'>identifier ark:/12148/btv1b53136138p</a>"});
 	boilat1853.addTo(map);
-
+	
 	if ( DEBUGGING ) { window.alert("zoom = " + map.getZoom()); }
 </script>
 </body>
