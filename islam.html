@@ -16,10 +16,16 @@
 	*
 	-->
 	<!--
-	* Opacity Slider
+	* Opacity Slider: https://github.com/lizardtechblog/Leaflet.OpacityControls
 	-->
 	<link rel="stylesheet" href="js/opacity/Control.Opacity.css" />
 	<script src="js/opacity/Control.Opacity.js"></script>
+	<!--
+	*
+	* Time Slider
+	*
+	-->
+	<script src="js/time/SliderControl.js"></script>
 	<!--
 	* AJAX (for getting GeoJSON in)
 	-->
@@ -121,10 +127,9 @@ var imageUrl = '/images/istakhri.png',
 //L.imageOverlay( imageUrl, imageBounds, imageOptions).addTo(mymap);
 
 /* One way to do a simple popup */
-var guinée = L.marker( [10.984035, -11.331137], {} );
+var guinée = L.marker( [10.984035, -11.331137], {time: 01-01-1800} );
 guinée.bindPopup("<img src='https://d1lfxha3ugu3d4.cloudfront.net/images/opencollection/objects/size2/22.239_SL1.jpg' width='250' /><p>Possibly Bullom. <a href='https://www.brooklynmuseum.org/opencollection/objects/12712'>Mancala Game Board, 19th century</a>. Wood, 8 1/4 x 23 1/4 x 5 1/8 in. (21 x 59.1 x 13 cm). Brooklyn Museum, Museum Expedition 1922, Robert B. Woodward Memorial Fund, 22.239. Creative Commons-BY (Photo: Brooklyn Museum, 22.239_SL1.jpg)</p>").openPopup();
 guinée.addTo(mymap);
-
 
 
 /*
@@ -138,7 +143,6 @@ function updateOpacity(value) {
 } 
 */
 
-
 /*
 *
 * Opacity Slider #2
@@ -148,6 +152,28 @@ function updateOpacity(value) {
 var opacitySlider = new L.Control.opacitySlider();
 mymap.addControl(opacitySlider);
 opacitySlider.setOpacityLayer(africaTurkish);
+
+
+/*
+*
+* Time Slider #1
+*
+*/
+ //Fetch some data from a GeoJSON file
+    $.getJSON("data/points.json", function(json) {
+
+      var testlayer = L.geoJson(json);
+      var sliderControl = L.control.sliderControl({
+        position: "bottomleft",
+        layer: testlayer,
+        range: true
+      });
+
+      //Make sure to add the slider to the map ;-)
+      sliderControl.addTo(mymap);
+      //An initialize the slider
+      sliderControl.startSlider();
+    });
 
 /* GeoJSON through AJAX for a ~pure Leaflet approach */
 /* https://gis.stackexchange.com/questions/68489/how-to-load-external-geojson-file-into-leaflet-map */
