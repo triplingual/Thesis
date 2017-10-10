@@ -121,8 +121,8 @@ antilles_i_Geojson.addTo(mymap);
 var antilles_ii_Geojson	= new L.GeoJSON.AJAX("/data/antilles_ii.geojson", { style: myStyle });
 antilles_ii_Geojson.addTo(mymap);
 // Haiti (cited in Béart map)
-var haitiGeojson	= new L.GeoJSON.AJAX("/data/haiti.geojson", { style: myStyle });
-haitiGeojson.addTo(mymap);
+// var haitiGeojson	= new L.GeoJSON.AJAX("/data/haiti.geojson", { style: myStyle });
+// haitiGeojson.addTo(mymap);
 // Louisiane et Floride  (cited in Béart map)
 //	Louisiana became a state in 1812, early enough for my purposes)
 var louisianeGeojson	= new L.GeoJSON.AJAX("/data/louisiana.geojson", { style: myStyle });
@@ -172,7 +172,7 @@ guyaneAltGeojson.addTo(mymap);
 // Avelot 1906
 //
 // "Les Haoussa" (w/o further detail, p12)
-// "Palestine" (p12)
+// "Palestine" (p12; Ottoman Empire — can"t claim the whole empire)
 // "Nubie" (p12)
 // "l'Ouganda, de l'Oussindya et de l'Oukéréwé" (Uganda, ??, ??; p13; last seems to have something to do with Lake Tanganyika, the middle with the Zambezi)
 // Oumtali (p13; either Mozambique or Zimbabwe, it seems; https://books.google.com/books?id=z5czAAAAYAAJ&pg=PA356&lpg=PA356&dq=%22oumtali%22&source=bl&ots=LoTBqO8dzN&sig=KzYkjTBzhaZGoz3wJJCCTyZhyf0&hl=en&sa=X&ved=0ahUKEwikmd_3t7_WAhVmlFQKHeiqBNoQ6AEIMzAD#v=onepage&q=%22oumtali%22&f=false)
@@ -275,6 +275,33 @@ kuwait.addTo(mymap);
 // Eson Khorgol in Mongolia (http://www.awale.info/asia-central/eson-khorgol/?lang=en; requested 'Wari et Solo' from Borrow Direct)
 //
 // Togyz Kumalak in Kazakhstan, Kyrgyzstan, Uzbekistan, Tajikistan, Turkmenistan, Afghanistan, Russia parts, Mongolia, China parts (http://www.awale.info/asia-central/toguz-kumalak/?lang=en
+
+//
+// BARNES, 1975
+// "Mancala in Kédang"
+// 
+var east_nusa	= new L.GeoJSON.AJAX("/data/east-nusa-tenggara_indonesia.geojson", { style: myStyle });
+east_nusa.addTo(mymap);
+
+//
+// POPOVA, 1976, 441
+// "Les mankala africains"
+// Not usable; she cites a board as Ibo, 
+// but her source book is titled "Niger Ibos" but is about Nigeria, not Niger
+
+//
+// BAUTISTA I ROCA, 2005
+// "Africa hidden inside a small hole: mancala games played in the Dominican Republic"
+// 
+//var dominican_republic	= new L.GeoJSON.AJAX("/data/dominican-republic.geojson", { style: myStyle });
+// dominican_republic.addTo(mymap);
+
+//
+// Between Herskovits' claim for Haiti and Bautista i Roca's claim for the Dominican Republic, and the unity of the island under one government from 1821–1844, I'm going to assert the non-need for a national border in the middle of the island.
+//
+var dominica	= new L.GeoJSON.AJAX("/data/dominica.geojson", { style: myStyle });
+dominica.addTo(mymap);
+
 
 
 // example of how a function might work
