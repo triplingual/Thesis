@@ -302,6 +302,18 @@ east_nusa.addTo(mymap);
 var dominica	= new L.GeoJSON.AJAX("/data/dominica.geojson", { style: myStyle });
 dominica.addTo(mymap);
 
+//
+// AND, 1979
+// Citing Thomas Hyde, "De Ludis Orientalibus", 1694
+//
+// Turkey and Azerbaijan
+//
+var turkey	= new L.GeoJSON.AJAX("/data/turkey.geojson", { style: myStyle });
+turkey.addTo(mymap);
+var azerbaijan	= new L.GeoJSON.AJAX("/data/azerbaijan.geojson", { style: myStyle });
+azerbaijan.addTo(mymap);
+
+
 
 
 // example of how a function might work
