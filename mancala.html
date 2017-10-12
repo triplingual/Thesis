@@ -261,6 +261,17 @@ mongoliaGeojson.addTo(mymap);
 //
 var africaLessUnattested	= new L.GeoJSON.AJAX("/data/africa-less-unattested-slivers-erased.geojson", { style: myStyle });
 africaLessUnattested.addTo(mymap);
+//
+// Deledicq & Popova claim (21), "le _wari-solo_ à lui seul monopolise le Continent Noir entier"
+// Others make similar unsubstantiated claims, but I'm considering representing the assertion
+//
+var africa	= new L.GeoJSON.AJAX("/data/africa.geojson", { style: {
+		"color": "#9955bb",
+		"weight": 3,
+		"opacity": 0.8
+	} });
+africa.addTo(mymap);
+
 
 //
 // Hawkins, 1987
