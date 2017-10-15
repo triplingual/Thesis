@@ -83,6 +83,19 @@ var africa	= new L.GeoJSON.AJAX("/data/africa.geojson", { style: {
 	} });
 africa.addTo(mymap);
 
+//
+// CASAJUS, 1988
+// Contemporary, not historic, so giving it a different style
+//
+// Keep this toward the top so that it will load before the more incomplete map
+// 
+var niger	= new L.GeoJSON.AJAX("/data/niger.geojson", { style: {
+		"color": "#442255",
+		"weight": 3
+	} });
+niger.addTo(mymap);
+
+
 
 // Philippines (cited in Béart map)
 var philippinesGeojson	= new L.GeoJSON.AJAX("/data/philippines.geojson", { style: myStyle });
