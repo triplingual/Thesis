@@ -69,6 +69,21 @@
 
 /* GeoJSON through AJAX for a ~pure Leaflet approach */
 /* https://gis.stackexchange.com/questions/68489/how-to-load-external-geojson-file-into-leaflet-map */
+
+//
+// Deledicq & Popova claim (21), "le _wari-solo_ à lui seul monopolise le Continent Noir entier"
+// Others make similar unsubstantiated claims, but I'm considering representing the assertion
+//
+// Keep this toward the top so that it will load before the more incomplete map
+// 
+var africa	= new L.GeoJSON.AJAX("/data/africa.geojson", { style: {
+		"color": "#9955bb",
+		"weight": 3,
+		"opacity": 0.8
+	} });
+africa.addTo(mymap);
+
+
 // Philippines (cited in Béart map)
 var philippinesGeojson	= new L.GeoJSON.AJAX("/data/philippines.geojson", { style: myStyle });
 philippinesGeojson.addTo(mymap);
@@ -261,16 +276,6 @@ mongoliaGeojson.addTo(mymap);
 //
 var africaLessUnattested	= new L.GeoJSON.AJAX("/data/africa-less-unattested-slivers-erased.geojson", { style: myStyle });
 africaLessUnattested.addTo(mymap);
-//
-// Deledicq & Popova claim (21), "le _wari-solo_ à lui seul monopolise le Continent Noir entier"
-// Others make similar unsubstantiated claims, but I'm considering representing the assertion
-//
-var africa	= new L.GeoJSON.AJAX("/data/africa.geojson", { style: {
-		"color": "#9955bb",
-		"weight": 3,
-		"opacity": 0.8
-	} });
-africa.addTo(mymap);
 
 
 //
