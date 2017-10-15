@@ -324,7 +324,53 @@ turkey.addTo(mymap);
 var azerbaijan	= new L.GeoJSON.AJAX("/data/azerbaijan.geojson", { style: myStyle });
 azerbaijan.addTo(mymap);
 
+//
+// ROLLEFSON, 1992
+// Neolithic Game Board from 'Ain Ghazal, Jordan
+//
+// Jordan
+//
+var jordan	= new L.GeoJSON.AJAX("/data/jordan.geojson", { style: myStyle });
+jordan.addTo(mymap);
 
+//
+// BIKIĆ AND VUKOVIĆ, 2010
+//
+// Belgrade, Serbia (Ottoman Empire)
+//
+var serbia	= new L.GeoJSON.AJAX("/data/serbia.geojson", { style: myStyle });
+serbia.addTo(mymap);
+
+//
+// CHARPENTIER ET AL. 2014
+//
+// Oman
+//
+var oman	= new L.GeoJSON.AJAX("/data/oman.geojson", { style: myStyle });
+oman.addTo(mymap);
+
+//
+// ARJUN, 2014
+//
+// Pune county, India
+// Because India is so big, I'm holding off asserting all of India right now.
+// I'm leaning toward it, though, because of the Sri Lanka, Maldives, and 
+// Indonesian/Malaccan attestations
+//
+var pune	= new L.GeoJSON.AJAX("/data/pune-county-india.json", { style: myStyle });
+pune.addTo(mymap);
+
+//
+// MARTIN SIEBERT, 2010
+//
+// Virginia, USA
+// As with Pune (and Louisiana and Florida), I'm taking parts of large places.
+// Noting here that I'm also looking at adjacency. The countries of Africa are densely
+// complex, but there's so much adjacency and it's where the game started that I will
+// overgeneralize there.
+//
+var virginia	= new L.GeoJSON.AJAX("/data/virginia.json", { style: myStyle });
+virginia.addTo(mymap);
 
 
 // example of how a function might work
