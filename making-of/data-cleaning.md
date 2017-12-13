@@ -79,6 +79,11 @@ $ -erase eritrea.geojson remove-slivers
 $ -erase djibouti.geojson remove-slivers
 $ -filter-slivers min-area=700000000
 
+## Shape Simplification in MapShaper
+
+This area I new next to nothing about. The words, I understand. Reduce the number of points in the outline of the geographic area in the GeoJSON file. This helps the file take up less space and may not materially degrade your shape. Example: I uploaded the Illinois GeoJSON that I got from MapZen's Spelunker to the Quick Upload area of Mapshaper. Hit the "Simplify" button, and take the default, which is to only have "Visvalingam / weighted area" selected. Play with the slider that will appear toward the top of the screen to see where you start noticing meaningful differences, keeping in mind what scale you want to care about. I think I'm starting to like 15%, especially since so far I only care about the country-level data. (Big exception was making the unified map of attestations of Mancala family games on the African continent. I built it a country at a time, and I needed those to match on boundaries.) Once you're satisfied, use the Export button to download the reduced file as JSON. Open that JSON file up and 1) strip out unknown content and 2) strip out obvious but unneeded content. Still working with Illinois: I took out a ton of non-location properties, like how to say Illinois in Russian.
+
+
 ## Character Encodings
 
 This [GIS StackExchange question about converting character encodings](https://gis.stackexchange.com/questions/15912/how-to-encode-shapefiles-from-latin1-to-utf-8) can be useful when going from a specific character set to another, including UTF-8. I had to do this with some Polish GIS files for the Mary Berg project, as they were in ISO 8859-2. This time I didn't seem to have such difficulty with encodings, but I did get a warning during one merge process and ran it again setting `-lco ENCODING=UTF-8`
