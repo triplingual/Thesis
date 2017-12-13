@@ -182,6 +182,19 @@ louisianeGeojson.addTo(mymap);
 //	Florida didn't become a state until 1845, but Georgia was 1788 and Alabama was 1819, so Florida's borders should have been essentially these throughout my time period
 var floridaGeojson		= new L.GeoJSON.AJAX("data/florida.geojson", { style: myStyle });
 floridaGeojson.addTo(mymap);
+//	Illinois (Goode, 2009, p3)
+var illinoisGeojson		= new L.GeoJSON.AJAX("data/illinois.geojson", { style: myStyle });
+illinoisGeojson.addTo(mymap);
+//	Mississippi (Goode or Handler citing the German/Austrian)
+var mississippiGeojson		= new L.GeoJSON.AJAX("data/mississippi.geojson", { style: myStyle });
+mississippiGeojson.addTo(mymap);
+//	Tennessee (Goode, 2009, p3)
+var tennesseeGeojson		= new L.GeoJSON.AJAX("data/tennessee.geojson", { style: myStyle });
+tennesseeGeojson.addTo(mymap);
+
+
+
+
 
 // Guyana (Béart map; assuming he means French Guiana / Guyane)
 var guyaneGeojson	= new L.GeoJSON.AJAX("data/guyane.geojson", { style: myStyle });
