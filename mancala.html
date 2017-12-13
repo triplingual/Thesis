@@ -11,7 +11,7 @@
 	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
    crossorigin=""></script> 
    
-   <script src="/js/leaflet.ajax.min.js"></script>  
+   <script src="js/leaflet.ajax.min.js"></script>  
    
    <style type="text/css">
 	   .leaflet-container {
@@ -76,7 +76,7 @@
 //
 // Keep this toward the top so that it will load before the more incomplete map
 // 
-var africa	= new L.GeoJSON.AJAX("/data/africa.geojson", { style: {
+var africa	= new L.GeoJSON.AJAX("data/africa.geojson", { style: {
 		"color": "#9955bb",
 		"weight": 3,
 		"opacity": 0.8
@@ -89,7 +89,7 @@ africa.addTo(mymap);
 //
 // Keep this toward the top so that it will load before the more incomplete map
 // 
-var niger	= new L.GeoJSON.AJAX("/data/niger.geojson", { style: {
+var niger	= new L.GeoJSON.AJAX("data/niger.geojson", { style: {
 		"color": "#442255",
 		"weight": 3
 	} });
@@ -98,34 +98,34 @@ niger.addTo(mymap);
 
 
 // Philippines (Béart map)
-var philippinesGeojson	= new L.GeoJSON.AJAX("/data/philippines.geojson", { style: myStyle });
+var philippinesGeojson	= new L.GeoJSON.AJAX("data/philippines.geojson", { style: myStyle });
 philippinesGeojson.addTo(mymap);
 // Java (Béart map)
-var javaGeojson	= new L.GeoJSON.AJAX("/data/java.geojson", { style: myStyle });
+var javaGeojson	= new L.GeoJSON.AJAX("data/java.geojson", { style: myStyle });
 javaGeojson.addTo(mymap);
 // "Malacca" (Béart map)
-var melakaGeojson	= new L.GeoJSON.AJAX("/data/melaka.geojson", { style: myStyle });
+var melakaGeojson	= new L.GeoJSON.AJAX("data/melaka.geojson", { style: myStyle });
 melakaGeojson.addTo(mymap);
 // "Bornéo" (Béart map)
-var borneoGeojson	= new L.GeoJSON.AJAX("/data/borneo.geojson", { style: myStyle });
+var borneoGeojson	= new L.GeoJSON.AJAX("data/borneo.geojson", { style: myStyle });
 borneoGeojson.addTo(mymap);
 // "Ceylan" (Béart map)
-var srilankaGeojson	= new L.GeoJSON.AJAX("/data/sri-lanka.geojson", { style: myStyle });
+var srilankaGeojson	= new L.GeoJSON.AJAX("data/sri-lanka.geojson", { style: myStyle });
 srilankaGeojson.addTo(mymap);
 // Celebes (Murray, 1952)
-var sulawesi	= new L.GeoJSON.AJAX("/data/sulawesi.json", { style: myStyle });
+var sulawesi	= new L.GeoJSON.AJAX("data/sulawesi.json", { style: myStyle });
 sulawesi.addTo(mymap);
 // Sumatra (Murray, 1952)
-var sumatra	= new L.GeoJSON.AJAX("/data/sumatra.json", { style: myStyle });
+var sumatra	= new L.GeoJSON.AJAX("data/sumatra.json", { style: myStyle });
 sumatra.addTo(mymap);
 // Maldives (Béart map)
-var maldivesGeojson	= new L.GeoJSON.AJAX("/data/maldives.geojson", { style: myStyle });
+var maldivesGeojson	= new L.GeoJSON.AJAX("data/maldives.geojson", { style: myStyle });
 maldivesGeojson.addTo(mymap);
 // Annam (Vietnam, Murray 1952)
-var vietnam	= new L.GeoJSON.AJAX("/data/vietnam.json", { style: myStyle });
+var vietnam	= new L.GeoJSON.AJAX("data/vietnam.json", { style: myStyle });
 vietnam.addTo(mymap);
 // Siam (Thailand, Murray 1952)
-var thailand	= new L.GeoJSON.AJAX("/data/thailand.geojson", { style: myStyle });
+var thailand	= new L.GeoJSON.AJAX("data/thailand.geojson", { style: myStyle });
 thailand.addTo(mymap);
 
 
@@ -137,14 +137,14 @@ thailand.addTo(mymap);
 // "Teyma, Arabia" p168
 // Between this and the Béart map, I'm going to assert all Saudi Arabia, but not Yemen
 //
-var saudi_arabia	= new L.GeoJSON.AJAX("/data/saudi-arabia.json", { style: myStyle });
+var saudi_arabia	= new L.GeoJSON.AJAX("data/saudi-arabia.json", { style: myStyle });
 saudi_arabia.addTo(mymap);
 
 
 
 
 // Syria (Béart map)
-var syriaGeojson	= new L.GeoJSON.AJAX("/data/syria.geojson", { style: myStyle });
+var syriaGeojson	= new L.GeoJSON.AJAX("data/syria.geojson", { style: myStyle });
 syriaGeojson.addTo(mymap);
 // "Abyssinie"  (Béart map; using modern Ethiopia)
 // Egypte (Lane, 1846; Avelot 1908 p9; Béart map;)
@@ -168,25 +168,25 @@ syriaGeojson.addTo(mymap);
 // Aïn Bou Arja (Maroc) (using Morocco)
 // In Salah  (Béart map; using Algeria)
 // "Antilles"  (Béart map; got a custom Mapzen Metro Extract of selected Antilles)
-var antilles_i_Geojson	= new L.GeoJSON.AJAX("/data/antilles_i.geojson", { style: myStyle });
+var antilles_i_Geojson	= new L.GeoJSON.AJAX("data/antilles_i.geojson", { style: myStyle });
 antilles_i_Geojson.addTo(mymap);
-var antilles_ii_Geojson	= new L.GeoJSON.AJAX("/data/antilles_ii.geojson", { style: myStyle });
+var antilles_ii_Geojson	= new L.GeoJSON.AJAX("data/antilles_ii.geojson", { style: myStyle });
 antilles_ii_Geojson.addTo(mymap);
 // Haiti (Béart map)
-// var haitiGeojson	= new L.GeoJSON.AJAX("/data/haiti.geojson", { style: myStyle });
+// var haitiGeojson	= new L.GeoJSON.AJAX("data/haiti.geojson", { style: myStyle });
 // haitiGeojson.addTo(mymap);
 // Louisiane et Floride  (Béart map)
 //	Louisiana became a state in 1812, early enough for my purposes)
-var louisianeGeojson	= new L.GeoJSON.AJAX("/data/louisiana.geojson", { style: myStyle });
+var louisianeGeojson	= new L.GeoJSON.AJAX("data/louisiana.geojson", { style: myStyle });
 louisianeGeojson.addTo(mymap);
 //	Florida didn't become a state until 1845, but Georgia was 1788 and Alabama was 1819, so Florida's borders should have been essentially these throughout my time period
 var floridaGeojson		= new L.GeoJSON.AJAX("data/florida.geojson", { style: myStyle });
 floridaGeojson.addTo(mymap);
 
 // Guyana (Béart map; assuming he means French Guiana / Guyane)
-var guyaneGeojson	= new L.GeoJSON.AJAX("/data/guyane.geojson", { style: myStyle });
+var guyaneGeojson	= new L.GeoJSON.AJAX("data/guyane.geojson", { style: myStyle });
 guyaneGeojson.addTo(mymap);
-//var guyaneAltGeojson	= new L.GeoJSON.AJAX("/data/guyane-alt.geojson", { style: myStyle });
+//var guyaneAltGeojson	= new L.GeoJSON.AJAX("data/guyane-alt.geojson", { style: myStyle });
 //guyaneAltGeojson.addTo(mymap);
 
 
@@ -249,7 +249,7 @@ guyaneGeojson.addTo(mymap);
 //
 // China (De Voogt 1997, p71; but probably should get doco on when game arrived in East and Southeast Asia before making strong claims including them; Africa is enough, for sure, so no reason to overreach)
 // Vernon Eagle, but I believe Murray also
-var yunnanChina	= new L.GeoJSON.AJAX("/data/yunnan-china.geojson", { style: myStyle });
+var yunnanChina	= new L.GeoJSON.AJAX("data/yunnan-china.geojson", { style: myStyle });
 yunnanChina.addTo(mymap);
 
 // India (De Voogt 1997, p71; same note as China)
@@ -301,16 +301,16 @@ yunnanChina.addTo(mymap);
 // Burkina Faso (p32; cites Walker 1990 on this; need to follow the cite)
 //
 // Suriname (p14)
-var surinameGeojson	= new L.GeoJSON.AJAX("/data/suriname.geojson", { style: myStyle });
+var surinameGeojson	= new L.GeoJSON.AJAX("data/suriname.geojson", { style: myStyle });
 surinameGeojson.addTo(mymap);
 // Cyprus (p18; note that Cyprus was part of the Ottoman Empire)
-var cyprusGeojson	= new L.GeoJSON.AJAX("/data/cyprus.json", { style: myStyle });
+var cyprusGeojson	= new L.GeoJSON.AJAX("data/cyprus.json", { style: myStyle });
 cyprusGeojson.addTo(mymap);
 // Bahamas (p18)
-var bahamasGeojson	= new L.GeoJSON.AJAX("/data/bahamas.geojson", { style: myStyle });
+var bahamasGeojson	= new L.GeoJSON.AJAX("data/bahamas.geojson", { style: myStyle });
 bahamasGeojson.addTo(mymap);
 // Guam (p18)
-var guamGeojson	= new L.GeoJSON.AJAX("/data/guam.geojson", { style: myStyle });
+var guamGeojson	= new L.GeoJSON.AJAX("data/guam.geojson", { style: myStyle });
 guamGeojson.addTo(mymap);
 
 //
@@ -318,17 +318,17 @@ guamGeojson.addTo(mymap);
 //
 // "Cyclades" (now ΝΟΤΙΟ ΑΙΓΑΙΟ, South Aegean Sea administrative region)
 //
-var cyclades	= new L.GeoJSON.AJAX("/data/cyclades.json", { style: myStyle });
+var cyclades	= new L.GeoJSON.AJAX("data/cyclades.json", { style: myStyle });
 cyclades.addTo(mymap);
 
 
 // TOWNSHEND 1977, p3; 1979a p122
 //
 // Iraq (p3; p122, citing Hyde)
-var iraqGeojson	= new L.GeoJSON.AJAX("/data/iraq.geojson", { style: myStyle });
+var iraqGeojson	= new L.GeoJSON.AJAX("data/iraq.geojson", { style: myStyle });
 iraqGeojson.addTo(mymap);
 // Mongolia (p3; p122, citing Namzhildorzh, 1963, "Mongolyn Togloom"", Ulan Bator, vol. i, pp. 85-102)
-var mongoliaGeojson	= new L.GeoJSON.AJAX("/data/mongolia.geojson", { style: myStyle });
+var mongoliaGeojson	= new L.GeoJSON.AJAX("data/mongolia.geojson", { style: myStyle });
 mongoliaGeojson.addTo(mymap);
 
 
@@ -339,7 +339,7 @@ mongoliaGeojson.addTo(mymap);
 //
 // Kyrgyzstan
 //
-var kyrgyzstan	= new L.GeoJSON.AJAX("/data/kyrgyzstan.geojson", { style: myStyle });
+var kyrgyzstan	= new L.GeoJSON.AJAX("data/kyrgyzstan.geojson", { style: myStyle });
 kyrgyzstan.addTo(mymap);
 
 
@@ -347,7 +347,7 @@ kyrgyzstan.addTo(mymap);
 //
 // Rolling up all the African countries into a GeoJSON of the continental outline less unattested countries
 //
-var africaLessUnattested	= new L.GeoJSON.AJAX("/data/africa-less-unattested-slivers-erased.geojson", { style: myStyle });
+var africaLessUnattested	= new L.GeoJSON.AJAX("data/africa-less-unattested-slivers-erased.geojson", { style: myStyle });
 africaLessUnattested.addTo(mymap);
 //
 // NOTE:
@@ -360,9 +360,9 @@ africaLessUnattested.addTo(mymap);
 //
 // Hawkins, 1987
 //
-var qatar	= new L.GeoJSON.AJAX("/data/qatar.geojson", { style: myStyle });
+var qatar	= new L.GeoJSON.AJAX("data/qatar.geojson", { style: myStyle });
 qatar.addTo(mymap);
-var kuwait	= new L.GeoJSON.AJAX("/data/kuwait.geojson", { style: myStyle });
+var kuwait	= new L.GeoJSON.AJAX("data/kuwait.geojson", { style: myStyle });
 kuwait.addTo(mymap);
 
 // AWALE.INFO (but need to get textual references)
@@ -375,20 +375,20 @@ kuwait.addTo(mymap);
 // BARNES, 1975
 // "Mancala in Kédang"
 // 
-var east_nusa	= new L.GeoJSON.AJAX("/data/east-nusa-tenggara_indonesia.geojson", { style: myStyle });
+var east_nusa	= new L.GeoJSON.AJAX("data/east-nusa-tenggara_indonesia.geojson", { style: myStyle });
 east_nusa.addTo(mymap);
 
 //
 // BAUTISTA I ROCA, 2005
 // "Africa hidden inside a small hole: mancala games played in the Dominican Republic"
 // 
-//var dominican_republic	= new L.GeoJSON.AJAX("/data/dominican-republic.geojson", { style: myStyle });
+//var dominican_republic	= new L.GeoJSON.AJAX("data/dominican-republic.geojson", { style: myStyle });
 // dominican_republic.addTo(mymap);
 
 //
 // Between Herskovits' claim for Haiti and Bautista i Roca's claim for the Dominican Republic, and the unity of the island under one government from 1821–1844, I'm going to assert the non-need for a national border in the middle of the island.
 //
-var dominica	= new L.GeoJSON.AJAX("/data/dominica.geojson", { style: myStyle });
+var dominica	= new L.GeoJSON.AJAX("data/dominica.geojson", { style: myStyle });
 dominica.addTo(mymap);
 
 //
@@ -397,9 +397,9 @@ dominica.addTo(mymap);
 //
 // Turkey and Azerbaijan
 //
-var turkey	= new L.GeoJSON.AJAX("/data/turkey.geojson", { style: myStyle });
+var turkey	= new L.GeoJSON.AJAX("data/turkey.geojson", { style: myStyle });
 turkey.addTo(mymap);
-var azerbaijan	= new L.GeoJSON.AJAX("/data/azerbaijan.geojson", { style: myStyle });
+var azerbaijan	= new L.GeoJSON.AJAX("data/azerbaijan.geojson", { style: myStyle });
 azerbaijan.addTo(mymap);
 
 //
@@ -410,7 +410,7 @@ azerbaijan.addTo(mymap);
 // "traditional" means w/r/t dates in this context and the only indicator is in the title
 // where the phrase "Russian Empire" appears, and that just means pre-1917.
 //
-var kazakhstan	= new L.GeoJSON.AJAX("/data/kazakhstan.json", { style: myStyle });
+var kazakhstan	= new L.GeoJSON.AJAX("data/kazakhstan.json", { style: myStyle });
 kazakhstan.addTo(mymap);
 
 //
@@ -422,7 +422,7 @@ kazakhstan.addTo(mymap);
 //
 // Jordan
 //
-var jordan	= new L.GeoJSON.AJAX("/data/jordan.geojson", { style: myStyle });
+var jordan	= new L.GeoJSON.AJAX("data/jordan.geojson", { style: myStyle });
 jordan.addTo(mymap);
 
 //
@@ -430,7 +430,7 @@ jordan.addTo(mymap);
 //
 // Belgrade, Serbia (Ottoman Empire)
 //
-var serbia	= new L.GeoJSON.AJAX("/data/serbia.geojson", { style: myStyle });
+var serbia	= new L.GeoJSON.AJAX("data/serbia.geojson", { style: myStyle });
 serbia.addTo(mymap);
 
 //
@@ -438,7 +438,7 @@ serbia.addTo(mymap);
 //
 // Oman
 //
-var oman	= new L.GeoJSON.AJAX("/data/oman.geojson", { style: myStyle });
+var oman	= new L.GeoJSON.AJAX("data/oman.geojson", { style: myStyle });
 oman.addTo(mymap);
 
 //
@@ -449,7 +449,7 @@ oman.addTo(mymap);
 // I'm leaning toward it, though, because of the Sri Lanka, Maldives, and 
 // Indonesian/Malaccan attestations
 //
-//var pune	= new L.GeoJSON.AJAX("/data/pune-county-india.json", { style: myStyle });
+//var pune	= new L.GeoJSON.AJAX("data/pune-county-india.json", { style: myStyle });
 //pune.addTo(mymap);
 
 //
@@ -461,7 +461,7 @@ oman.addTo(mymap);
 //
 // (Should I use Maharashtra instead of Pune, then?)
 //
-//var karnataka	= new L.GeoJSON.AJAX("/data/karnataka.json", { style: myStyle });
+//var karnataka	= new L.GeoJSON.AJAX("data/karnataka.json", { style: myStyle });
 //karnataka.addTo(mymap);
 
 //
@@ -472,7 +472,7 @@ oman.addTo(mymap);
 // might mislead the reader into thinking that my claims about countries in Africa are 
 // different from my claims about countries elsewhere.
 //
-var india	= new L.GeoJSON.AJAX("/data/india.json", { style: myStyle });
+var india	= new L.GeoJSON.AJAX("data/india.json", { style: myStyle });
 india.addTo(mymap);
 
 
@@ -485,7 +485,7 @@ india.addTo(mymap);
 // complex, but there's so much adjacency and it's where the game started that I will
 // overgeneralize there.
 //
-var virginia	= new L.GeoJSON.AJAX("/data/virginia.json", { style: myStyle });
+var virginia	= new L.GeoJSON.AJAX("data/virginia.json", { style: myStyle });
 virginia.addTo(mymap);
 
 
