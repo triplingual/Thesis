@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Places of Education in Mid-C19 Senegambia</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+	crossorigin=""/>
+	<!-- Make sure you put this AFTER Leaflet's CSS -->
+	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+	crossorigin=""></script> 
+
+	<!--
+	*
+	* LEAFLET PLUGINS
+	*
+	-->
+	<!--
+	* AJAX (for getting GeoJSON in)
+	-->
+	<script src="/js/leaflet.ajax.min.js"></script>  
+
+</head>
+<body>
+	<div id="map" style="width:98%; height: 600px;float:left; min-width: 320px; margin: 1%;"></div>
+
+	<script>
+	var accessToken = 'pk.eyJ1IjoidHJpcGxpbmd1YWwiLCJhIjoiUFZTSEpYNCJ9.TjhlG-pOgpKcxXt8vL-IOg';
+	var mymap = L.map('map').setView([14.544125,-14.722052], 3);
+
+
+	var myStyle = {
+		"color": "#ff7800",
+		"weight": 5,
+		"opacity": 0.65
+	};
+	var africaLessUnattested	= new L.GeoJSON.AJAX("/data/africa-less-unattested-slivers-erased.geojson", {style:myStyle});
+africaLessUnattested.addTo(mymap);
+
+	</script>
+</body>
+</html>
