@@ -175,25 +175,6 @@ antilles_ii_Geojson.addTo(mymap);
 // Haiti (Béart map)
 // var haitiGeojson	= new L.GeoJSON.AJAX("data/haiti.geojson", { style: myStyle });
 // haitiGeojson.addTo(mymap);
-// Louisiane et Floride  (Béart map)
-//	Louisiana became a state in 1812, early enough for my purposes)
-var louisianeGeojson	= new L.GeoJSON.AJAX("data/louisiana.geojson", { style: myStyle });
-louisianeGeojson.addTo(mymap);
-//	Florida didn't become a state until 1845, but Georgia was 1788 and Alabama was 1819, so Florida's borders should have been essentially these throughout my time period
-var floridaGeojson		= new L.GeoJSON.AJAX("data/florida.geojson", { style: myStyle });
-floridaGeojson.addTo(mymap);
-//	Illinois (Goode, 2009, p3)
-var illinoisGeojson		= new L.GeoJSON.AJAX("data/illinois.geojson", { style: myStyle });
-illinoisGeojson.addTo(mymap);
-//	Mississippi (Goode or Handler citing the German/Austrian)
-var mississippiGeojson		= new L.GeoJSON.AJAX("data/mississippi.geojson", { style: myStyle });
-mississippiGeojson.addTo(mymap);
-//	Tennessee (Goode, 2009, p3)
-var tennesseeGeojson		= new L.GeoJSON.AJAX("data/tennessee.geojson", { style: myStyle });
-tennesseeGeojson.addTo(mymap);
-
-
-
 
 
 // Guyana (Béart map; assuming he means French Guiana / Guyane)
@@ -488,6 +469,24 @@ oman.addTo(mymap);
 var india	= new L.GeoJSON.AJAX("data/india.geojson", { style: myStyle });
 india.addTo(mymap);
 
+
+// USA
+// Louisiane et Floride  (Béart map)
+//	Louisiana became a state in 1812, early enough for my purposes)
+var louisianeGeojson	= new L.GeoJSON.AJAX("data/louisiana.geojson", { style: myStyle });
+louisianeGeojson.addTo(mymap);
+//	Florida didn't become a state until 1845, but Georgia was 1788 and Alabama was 1819, so Florida's borders should have been essentially these throughout my time period
+var floridaGeojson		= new L.GeoJSON.AJAX("data/florida.geojson", { style: myStyle });
+floridaGeojson.addTo(mymap);
+//	Illinois (Goode, 2009, p3)
+var illinoisGeojson		= new L.GeoJSON.AJAX("data/illinois.geojson", { style: myStyle });
+illinoisGeojson.addTo(mymap);
+//	Mississippi (Goode or Handler citing the German/Austrian)
+var mississippiGeojson		= new L.GeoJSON.AJAX("data/mississippi.geojson", { style: myStyle });
+mississippiGeojson.addTo(mymap);
+//	Tennessee (Goode, 2009, p3)
+var tennesseeGeojson		= new L.GeoJSON.AJAX("data/tennessee.geojson", { style: myStyle });
+tennesseeGeojson.addTo(mymap);
 
 //
 // MARTIN SIEBERT, 2010
