@@ -1,4 +1,4 @@
-# Going from Data That There Is to Data That I Want
+# Going from Data That I Am Given to Data That I Want
 
 _Dear Reader: What I note here is what worked for me. I may have missed something that I did, since I'm not a DVR. Conversely, something I write may be replicable on my machine, with my data, under the light of a full moon, but might not work for you, dear reader._
 
@@ -38,10 +38,10 @@ By the time I got to Sumatra and Sulawesi, I was tired of the manual work I need
 
 * Get [an Amazon Web Services (AWS) account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html); you can use your regular Amazon login if you have one, but it's worth considering whether managing your work (including expenses) would benefit from a distinct AWS account, weighed against the overhead of managing multiple accounts.
 * [Create a non-root admin user account in AWS](http://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html), downloading the credentials document when it's available.
-* Create a developer-type user account in AWS (very similar to creating the non-root admin user above, but with a different group and permissions. Download the credentials document when it's made available to you.
+* Create a developer-type user account in AWS in a process very similar to creating the non-root admin user above but with a different group and permissions. Download the credentials document when it's made available to you.
 * Get a [Bitnami Stacksmith account](https://bitnami.com/account/sign_up)
 * Create the smallest, least powered [AWS EC2 server for Node.js](https://aws.bitnami.com/launch/nodejs) you can through Bitnami
-	* (You'll need to wait 2 hours after creating the AWS admin user in order to create this server.)
+	* You'll need to wait 2 hours after creating the AWS admin user in order to create this server.
 	* You'll need two of the items from the downloaded credentials file for the admin user you created above.
 	* I don't know yet whether the storage for this box is persistent or not. My recommendation is to assume that anything you've stored on the box will disappear when you shut it down, which you should whenever you're not using it because the money starts to add up if you leave it running. That's fine if you can swing the coin and you need the box available all the time. I don't. Right now, I just want to have a Node.js box that I can merge GeoJSON files on from time to time.
 * ssh to the AWS EC2 box using the PEM file and connection command line provided by Bitnami
@@ -81,8 +81,7 @@ $ -filter-slivers min-area=700000000
 
 ## Shape Simplification in MapShaper
 
-This area I new next to nothing about. The words, I understand. Reduce the number of points in the outline of the geographic area in the GeoJSON file. This helps the file take up less space and may not materially degrade your shape. Example: I uploaded the Illinois GeoJSON that I got from MapZen's Spelunker to the Quick Upload area of Mapshaper. Hit the "Simplify" button, and take the default, which is to only have "Visvalingam / weighted area" selected. Play with the slider that will appear toward the top of the screen to see where you start noticing meaningful differences, keeping in mind what scale you want to care about. I think I'm starting to like 15%, especially since so far I only care about the country-level data. (Big exception was making the unified map of attestations of Mancala family games on the African continent. I built it a country at a time, and I needed those to match on boundaries.) Once you're satisfied, use the Export button to download the reduced file as JSON. Open that JSON file up and 1) strip out unknown content and 2) strip out obvious but unneeded content. Still working with Illinois: I took out a ton of non-location properties, like how to say Illinois in Russian.
-
+This area I knew next to nothing about. The words, I understand. Reduce the number of points in the outline of the geographic area in the GeoJSON file. This helps the file take up less space and may not materially degrade your shape. Example: I uploaded the Illinois GeoJSON that I got from MapZen's Spelunker to the Quick Upload area of Mapshaper. Hit the "Simplify" button, and take the default, which is to only have "Visvalingam / weighted area" selected. Play with the slider that will appear toward the top of the screen to see where you start noticing meaningful differences, keeping in mind what scale you want to care about. I think I'm starting to like 15%, especially since so far I nearly always only care about the country-level data. (Big exception was making the unified map of attestations of Mancala family games on the African continent. I built it a country at a time, and I needed those to match on boundaries.) Once you're satisfied, use the Export button to download the reduced file as GeoJSON. Open that JSON file up and 1) strip out unknown content and 2) strip out obvious but unneeded content. Still working with Illinois: I took out a ton of non-location properties from the JSON directly, like how to say Illinois in Russian.
 
 ## Character Encodings
 
