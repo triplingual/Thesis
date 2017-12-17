@@ -363,7 +363,29 @@ kuwait.addTo(mymap);
 //
 // Eson Khorgol in Mongolia (http://www.awale.info/asia-central/eson-khorgol/?lang=en; requested 'Wari et Solo' from Borrow Direct)
 //
-// Togyz Kumalak in Kazakhstan, Kyrgyzstan, Uzbekistan, Tajikistan, Turkmenistan, Afghanistan, Russia parts, Mongolia, China parts (http://www.awale.info/asia-central/toguz-kumalak/?lang=en
+// Togyz Kumalak in Kazakhstan, Kyrgyzstan, Uzbekistan, Tajikistan, Turkmenistan, Afghanistan, Russia parts, Mongolia, China parts (http://www.awale.info/asia-central/toguz-kumalak/?lang=en)
+//
+// KALYSH, 2012
+//
+// Kazakhstan
+// Weak, since I can't get the original articles right now, and it's hard to say what 
+// "traditional" means w/r/t dates in this context and the only indicator is in the title
+// where the phrase "Russian Empire" appears, and that just means pre-1917.
+//
+var russia	= new L.GeoJSON.AJAX("data/russia-merged.geojson", { style: myStyle });
+russia.addTo(mymap);
+var kazakhstan	= new L.GeoJSON.AJAX("data/kazakhstan.geojson", { style: myStyle });
+kazakhstan.addTo(mymap);
+var kyrgyzstan	= new L.GeoJSON.AJAX("data/kyrgyzstan.geojson", { style: myStyle });
+kyrgyzstan.addTo(mymap);
+var uzbekistan	= new L.GeoJSON.AJAX("data/uzbekistan.geojson", { style: myStyle });
+uzbekistan.addTo(mymap);
+var tajikistan	= new L.GeoJSON.AJAX("data/tajikistan.geojson", { style: myStyle });
+tajikistan.addTo(mymap);
+var turkmenistan	= new L.GeoJSON.AJAX("data/turkmenistan.geojson", { style: myStyle });
+turkmenistan.addTo(mymap);
+var afghanistan	= new L.GeoJSON.AJAX("data/afghanistan.geojson", { style: myStyle });
+afghanistan.addTo(mymap);
 
 //
 // BARNES, 1975
@@ -395,17 +417,6 @@ var turkey	= new L.GeoJSON.AJAX("data/turkey.geojson", { style: myStyle });
 turkey.addTo(mymap);
 var azerbaijan	= new L.GeoJSON.AJAX("data/azerbaijan.geojson", { style: myStyle });
 azerbaijan.addTo(mymap);
-
-//
-// KALYSH, 2012
-//
-// Kazakhstan
-// Weak, since I can't get the original articles right now, and it's hard to say what 
-// "traditional" means w/r/t dates in this context and the only indicator is in the title
-// where the phrase "Russian Empire" appears, and that just means pre-1917.
-//
-var kazakhstan	= new L.GeoJSON.AJAX("data/kazakhstan.json", { style: myStyle });
-kazakhstan.addTo(mymap);
 
 //
 // ROLLEFSON, 1992
