@@ -72,10 +72,10 @@ Removing country borders from map of Africa when I have no attested mancala fami
 In mapshaper.org, after uploading all unattested country GeoJSON files, with Africa continental outline layer active:
 $ -erase {country-file.geojson} remove-slivers # not entirely clear whether this does what I think it ought to and what I read the doco as saying.
 $ -erase libya.geojson remove-slivers
-$ -erase mozambique.geojson remove-slivers
+// $ -erase mozambique.geojson remove-slivers
 $ -erase zambia.geojson remove-slivers
 $ -erase swaziland.geojson remove-slivers
-$ -erase eritrea.geojson remove-slivers
+// $ -erase eritrea.geojson remove-slivers
 $ -erase djibouti.geojson remove-slivers
 $ -filter-slivers min-area=700000000
 
