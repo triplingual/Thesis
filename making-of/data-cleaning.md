@@ -75,7 +75,7 @@ $ -erase libya.geojson remove-slivers
 // $ -erase mozambique.geojson remove-slivers
 $ -erase zambia.geojson remove-slivers
 $ -erase swaziland.geojson remove-slivers
-// $ -erase eritrea.geojson remove-slivers
+// $ -erase eritrea.geojson remove-slivers 
 $ -erase djibouti.geojson remove-slivers
 $ -filter-slivers min-area=700000000
 
