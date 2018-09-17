@@ -18,19 +18,19 @@
 	       background-color: #E6D1B7;
 	   }
 	   #map {
-	       width: 900px;
-	       height: 700px;
-	       float: left;
-	       min-width: 320px;
-	       margin: 1%;
+	       width:		900px;
+	       height:		700px;
+	       float:		left;
+	       min-width:	320px;
+	       margin:		1%;
 	   }
 	   #commentary {
-	       width: 30%;
-	       min-width: 300px;
-	       max-width: 900px;
-	       float: left;
-	       clear: none;
-	       margin: 1%;
+	       width:		30%;
+	       min-width:	300px;
+	       max-width:	900px;
+	       float:		left;
+	       clear:		none;
+	       margin:		1%;
 	   }
    </style>
    
@@ -40,18 +40,21 @@
 	<div id="commentary">
 		<h1 style="margin-top: 0;">World of Mancala Games</h1>
 		<p>
-		Spicy jalapeno bacon ipsum dolor amet chuck prosciutto tongue, boudin porchetta pig burgdoggen salami pastrami doner venison biltong. Salami pork loin flank, kielbasa ribeye short loin andouille frankfurter filet mignon chicken. Tongue tri-tip cupim, filet mignon pig kevin burgdoggen ball tip fatback. Tongue landjaeger shankle, corned beef shoulder boudin sirloin kielbasa pancetta pork loin swine tri-tip.
+		In the map of mankala for this project, I’ve taken multiple approaches to assertions of the geospatial presence of mankala. Where attestations from the era of European conquest and colonialism or earlier exist over several discrete or imprecise places, I have optimistically included entire modern countries, dissolving political borders where encountered. Hence the continent of Africa is covered, excepting modern nation-states for whom I have found no attestations. Where post-colonial scholarship or archaeology has attested the presence of a mankala game in the recent past, I have been more granular and restrained in my spatial assertions. For instance, as mentioned above, in the USA archaeology at enslaved Africans’/African Americans’ living quarters of the 19th century has turned up objects possibly used in mankala play. Since African families and culture were intentionally fragmented by slavers, I have shown the game’s presence as the point location of the digs.
 		</p>
 		<p>
-		Pancetta salami leberkas, beef ribs swine andouille chuck meatloaf t-bone chicken ball tip jowl boudin landjaeger turducken. Meatloaf flank short loin beef ribs pork, turkey spare ribs filet mignon t-bone drumstick tongue. Chicken meatball pig short loin beef ribs leberkas. Prosciutto tongue pork shank sirloin turkey pork loin jerky picanha ground round. Chuck pastrami t-bone prosciutto shank landjaeger alcatra porchetta flank. Capicola tongue corned beef, drumstick shank salami sausage pork chop. Hamburger swine venison jowl, meatloaf pig frankfurter meatball rump pork alcatra capicola ground round.
+For archipelagos, I have followed the attestations. On the one hand, then, I have the Philippines and the Maldives in their entireties, but for modern-day Indonesia, I have individual islands or even parts of islands. Archipelagoes cannot be assumed to share all culture across any two islands, much less across the whole archipelago. Using the entire Philippines accedes to colonizer logic that argues the contrary about even an archipelago, but I have erred in that direction because my sources mention only the country as a whole and it would be yet more wrong to leave the Philippines off the map. {{BUT WHY NOT USE A DIFFERENT COLOR OR SOMETHING?}}
+		</p>
+		<p>
+I have again been a little optimistic or generous about the presence and spread of the game from modern attestations. For example, Víktor Bautista i Roca has conducted research on a Central Asian mankala game, played in Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan, Turkmenistan, and parts of Russia, Mongolia, and China. This game’s common appellation can be transliterated and romanized as togyz kumalak.  Where togyz kumalak appears in modern times in geographic space that parallels communications and trade of the Silk Road or the presence of Turkic peoples and languages, and where the gameplay geography involved is claimed by Bautista i Roca to be an entire country, I have used whole countries. Further scholarship that provides greater precision is welcome, but research would need to take in all of, for instance, Tajikistan before making reliable claims about a restricted spatiality of togyz kumalak in that land. Similarly, I have no distant past attestations or archaeology for mankala in Niger, but since nearly all the lands bordering it were home to mankala players, and since trans-Saharan trade has existed since ancient times, I’ve included the whole nation-state but color-coded it as modern. Libya provides a converse example: No historical or contemporary attestations showed up in my research, so despite being bounded by mankala-playing areas, it is not marked on the map as being one itself.
 		</p>
 	</div>
 
 	<script>
 	var myStyle = {
-		"color": "#33bb55",
-		"weight": 3,
-		"opacity": 0.8
+		"color":	"#33bb55",
+		"weight":	3,
+		"opacity":	0.8
 	};
 
 	var accessToken = 'pk.eyJ1IjoidHJpcGxpbmd1YWwiLCJhIjoiUFZTSEpYNCJ9.TjhlG-pOgpKcxXt8vL-IOg';
@@ -128,6 +131,17 @@ vietnam.addTo(mymap);
 var thailand	= new L.GeoJSON.AJAX("data/thailand.geojson", { style: myStyle });
 thailand.addTo(mymap);
 
+// Singapore, Brunei, Malaysia (Congklak, Cerrato, Il Fogliaccio degli astratti, May 2013)
+/*
+var malaysia	= new L.GeoJSON.AJAX("data/malaysia.geojson", { style: myStyle });
+malaysia.addTo(mymap);
+var brunei	= new L.GeoJSON.AJAX("data/brunei.geojson", { style: myStyle });
+brunei.addTo(mymap);
+var singapore	= new L.GeoJSON.AJAX("data/singapore.geojson", { style: myStyle });
+singapore.addTo(mymap);
+*/
+
+
 
 // Orient (Béart map)
 // 		TK; Béart drew this as the east coast of the Arabian peninsula, up to Syria/Lebanon
@@ -141,8 +155,6 @@ var saudi_arabia	= new L.GeoJSON.AJAX("data/saudi-arabia.geojson", { style: mySt
 saudi_arabia.addTo(mymap);
 
 
-
-
 // Syria (Béart map)
 var syriaGeojson	= new L.GeoJSON.AJAX("data/syria.geojson", { style: myStyle });
 syriaGeojson.addTo(mymap);
@@ -154,13 +166,13 @@ syriaGeojson.addTo(mymap);
 // "Haute-Guinée"  (Béart map; using modern Guinea)
 // "Ouganda" (Béart map)
 // Kenya (Béart map)
-// "Loango" (Béart map)
+// "Loango" (Béart map; using Republic of Congo)
 // "Rhodésie"  (Béart map; using Zambia)
 // "Fang"  (Béart map; using Cameroon & Gabon; https://en.wikipedia.org/wiki/Fang_people)
 	// Also, Avelot 1908 p9
 // Nigeria (Béart map)
 // "Dahomey"  (Béart map; using Bénin)
-// Nago (Avelot 1908 p9)
+	// Nago (Avelot 1908 p9; also Bénin)
 // "Baoulé"  (Béart map; using Côte d'Ivoire)
 // "Trarza"  (Béart map; using Mauritania)
 // "Tagant"  (Béart map)
@@ -183,7 +195,7 @@ guyaneGeojson.addTo(mymap);
 //var guyaneAltGeojson	= new L.GeoJSON.AJAX("data/guyane-alt.geojson", { style: myStyle });
 //guyaneAltGeojson.addTo(mymap);
 
-
+// TODO:
 // Brazil (Béart map)
 //		TK; Béart drew a little around Rio and São Paulo; not sure how to work this
 
@@ -249,7 +261,6 @@ yunnanChina.addTo(mymap);
 // India (De Voogt 1997, p71; same note as China)
 // Spain (De Voogt 1997, p18; intriguing! since mancala is old and since it may have been spread [excepting many parts of Africa] by Muslim commerce, no reason the residents of Al Andalus wouldn't have played it; but like China+India, need grounding in research)
 
-
 //
 // Avelot 1908
 //
@@ -261,7 +272,6 @@ yunnanChina.addTo(mymap);
 // "Les Malgaches" (p14; Madagascar)
 // "Kimbounda" (people; p15; Angola [chart p21])
 // "Comores" (p16; Comoros)
-
 //
 // Names/Places from chart from p21 otherwise unmentioned
 //
@@ -274,16 +284,14 @@ yunnanChina.addTo(mymap);
 // NB: Map on p19, but I think it reflects as much the partial knowledge of Euros as the actual distro of the game. Or at least I don't think it can be taken as the last word on the distro of the game.
 
 //
-// AVELOT 1906
-//
-// (Only noting the ones not in Avelot 1908)
+// AVELOT 1906 (Only noting the ones not in Avelot 1908)
 //
 // Bongo (Avelot 1906; Gabon; https://en.wikipedia.org/wiki/Bongo_people_(Gabon) )
 // Diour (Avelot 1906; ??)
 // Shillouk (Avelot 1906; South Sudan; https://en.wikipedia.org/wiki/Shilluk_people)
 // Ouroua (Avelot 1906; Lulua? probably DR Congo, as that's where _kisolo_ is played; https://en.wikipedia.org/wiki/Kisolo)
-
-
+//
+//
 //
 // DE VOOGT 1997 (only the new ones)
 // Africa
@@ -500,7 +508,6 @@ mississippiGeojson.addTo(mymap);
 //	Tennessee (Goode, 2009, p3)
 var tennesseeGeojson		= new L.GeoJSON.AJAX("data/tennessee.geojson", { style: myStyle });
 tennesseeGeojson.addTo(mymap);
-
 //
 // MARTIN SIEBERT, 2010
 //
@@ -512,7 +519,8 @@ tennesseeGeojson.addTo(mymap);
 //
 var virginia	= new L.GeoJSON.AJAX("data/virginia.geojson", { style: myStyle });
 virginia.addTo(mymap);
-
+// TODO:
+//		Need to add NYC from Culin (but color it as modern?)
 
 // example of how a function might work
 	var popup = L.popup();
